@@ -151,7 +151,7 @@ class CANVisApp(QMainWindow):
         self.status_bar.showMessage("Ready")
         
         # Update UI based on direct PCAN checkbox
-        self.direct_pcan_checkbox.stateChanged.connect(self.update_interface_controls)
+        self.direct_pcan_checkbox.stateChanged.connect(self.on_interface_mode_changed)
         self.update_interface_controls()
     
     def update_interface_controls(self):
@@ -161,53 +161,6 @@ class CANVisApp(QMainWindow):
         else:
             self.interface_widget.setVisible(True)
     
-    def init_components(self):
-        """Initialize backend components"""
-        # Create CAN interface (allow virtual only in simulation mode)
-        self.can_interface = CANInterface()
-
-        
-        # Variables for direct PCAN interface
-        self.direct_pcan = None
-        self.pcan_processor = None
-        
-        # Configure CAN interfaces based on mode
-        if self.args.simulation:
-            self.logger.info("Running in simulation mode")
-            self.sender_combo.addItem("Simulated Sender")
-            self.receiver_combo.addItem("Simulated Receiver")
-            # Disable direct PCAN in simulation mode
-            self.direct_pcan_checkbox.setChecked(False)
-            self.direct_pcan_checkbox.setEnabled(False)
-        else:
-            # Add available CAN interfaces
-            channels = ["PCAN_USBBUS1", "PCAN_USBBUS2"]
-            for channel in channels:
-                self.sender_combo.addItem(channel)
-                self.receiver_combo.addItem(channel)
-        
-        # If direct PCAN is specified in args, set it up now
-        if self.args.direct_pcan:
-            self.direct_pcan_checkbox.setChecked(True)
-            self.update_interface_controls()
-            self.logger.info(f"DirectPCAN checkbox set to: {self.direct_pcan_checkbox.isChecked()}")
-
-        # Create DBC parser
-        self.dbc_parser = DBCParser()
-        
-        # Load DBC file if specified
-        if self.args.dbc:
-            self.load_dbc_file(self.args.dbc)
-        
-        # Create message processor for standard interface
-        self.message_processor = MessageProcessor(self.can_interface, self.dbc_parser)
-        
-        # Connect signals
-        self.message_processor.message_decoded.connect(self.on_message_decoded)
-        self.message_processor.unknown_message.connect(self.on_unknown_message)
-        
-        # Simulator (used in simulation mode)
-        self.simulator = None
     
     def init_components(self):
         """Initialize backend components"""
@@ -313,13 +266,16 @@ class CANVisApp(QMainWindow):
         if not self.dbc_parser.db:
             QMessageBox.warning(self, "Warning", "Please load a DBC file first")
             return
-            
+        
+        # Use command line arg if present, otherwise use checkbox
+        use_direct_pcan = self.args.direct_pcan or self.direct_pcan_checkbox.isChecked()
+    
         # Log the current state
-        self.logger.info(f"Starting CAN with simulation={self.args.simulation}, direct_pcan={self.direct_pcan_checkbox.isChecked()}")
-            
+        self.logger.info(f"Starting CAN with simulation={self.args.simulation}, direct_pcan={use_direct_pcan}")
+        
         if self.args.simulation:
             self._start_simulation()
-        elif self.direct_pcan_checkbox.isChecked():
+        elif use_direct_pcan:
             self.logger.info("Starting DirectPCAN interface")
             self._start_direct_pcan()
         else:
@@ -513,7 +469,7 @@ class CANVisApp(QMainWindow):
                     signal_values[signal.name] = (min_val + max_val) / 2
                     self.logger.info(f"  Signal: {signal.name}, Value: {signal_values[signal.name]}")
             
-                # Send the message based on the active interface mode
+                # In send_test_messages method, modify the section that decides which interface to use:
                 if self.direct_pcan_checkbox.isChecked() and self.direct_pcan:
                     # Using direct PCAN interface
                     self.logger.info(f"Sending via DirectPCAN interface: {message.name}")
@@ -522,7 +478,7 @@ class CANVisApp(QMainWindow):
                 else:
                     # Using standard interface
                     self.logger.info(f"Sending via standard interface: {message.name}")
-                    sender_interface = "sender"
+                    sender_interface = "sender"  # This is always "sender" in standard interface mode
                     success = self.message_processor.create_and_send_message(
                         sender_interface, msg_id, signal_values)
                     self.logger.info(f"Sent test message {message.name} (0x{msg_id:X}) using standard interface: {success}")
@@ -537,6 +493,15 @@ class CANVisApp(QMainWindow):
     def save_settings(self):
         """Save application settings (placeholder)"""
         self.logger.info("Settings would be saved here")
+
+    def on_interface_mode_changed(self):
+        """Handle changes between direct PCAN and standard interface modes"""
+        # Stop any running interfaces
+        if self.stop_button.isEnabled():
+            self.stop_can()
+        
+        # Update UI based on current mode
+        self.update_interface_controls()
 
 def main():
     """Main application entry point"""
