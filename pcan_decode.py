@@ -29,7 +29,7 @@ def sender(exit_event):
     """Function to send test messages on PCAN_USBBUS1"""
     try:
         # Initialize the sender bus
-        sender_bus = can.interface.Bus(bustype='pcan', channel='PCAN_USBBUS1', bitrate=500000)
+        sender_bus = can.interface.Bus(interface='pcan', channel='PCAN_USBBUS1', bitrate=500000)
         print("Sender initialized on PCAN_USBBUS1")
         
         # Create message definitions from the provided specifications
@@ -77,18 +77,28 @@ def receiver(exit_event):
     """Function to receive and decode messages on PCAN_USBBUS2"""
     try:
         # Initialize the receiver bus
-        receiver_bus = can.interface.Bus(bustype='pcan', channel='PCAN_USBBUS2', bitrate=500000)
+        receiver_bus = can.interface.Bus(interface='pcan', channel='PCAN_USBBUS2', bitrate=500000)
         print("Receiver initialized on PCAN_USBBUS2")
         
-        # Create message definitions
-        messages = create_message_definitions()
+        # Create message definitions with the correct ID format the receiver will see
+        messages = create_message_definitions_for_receiver()
+        # Create a dictionary of message definitions keyed by ID
         message_dict = {msg.id: msg for msg in messages}
+        
+        # Debug: print all known message IDs
+        print("Known message IDs for receiver:")
+        for msg_id in message_dict:
+            print(f"  0x{msg_id:X}")
         
         while not exit_event.is_set():
             # Wait for a message (with timeout)
             message = receiver_bus.recv(1.0)  # 1 second timeout
             
             if message is not None:
+                # Print raw message details for debugging
+                print(f"\nRaw message received: ID=0x{message.arbitration_id:X}, " +
+                      f"is_extended_id={message.is_extended_id}")
+                
                 # Decode the message
                 decode_message(message, message_dict)
             
@@ -103,10 +113,8 @@ def create_message_definitions():
     """Create message and signal definitions from the provided specifications"""
     messages = []
     
-    
-    
-    # AccelerationSensor
-    msg2 = MessageDefinition(0x88FF88FE, "AccelerationSensor", 7)
+    # AccelerationSensor (for sending - full ID)
+    msg2 = MessageDefinition(0x88FF88FE, "AccelerationSensor", 8)
     msg2.signals.append(SignalDefinition("SpprtVrblTrnsRpttnRtFrAcclrtnSns", 54, 2, 1, '+', 1, 0, 0, 3, ""))
     msg2.signals.append(SignalDefinition("VrtclAcclrtnExRngeFigureOfMerit", 52, 2, 1, '+', 1, 0, 0, 3, ""))
     msg2.signals.append(SignalDefinition("LngtdnlAcclrtnExRngFgureOfMerit", 50, 2, 1, '+', 1, 0, 0, 3, ""))
@@ -116,6 +124,23 @@ def create_message_definitions():
     msg2.signals.append(SignalDefinition("LongitudinalAccelerationExRange", 16, 16, 1, '+', 0.01, -320, -320, 322.55, "m/s/s"))
     messages.append(msg2)
     
+    return messages
+
+def create_message_definitions_for_receiver():
+    """Create message definitions specifically for the receiver with the truncated ID format"""
+    messages = []
+    
+    # AccelerationSensor (for receiving - truncated ID)
+    # Based on the logs, the receiver sees 0x8FF88FE instead of 0x88FF88FE
+    msg2 = MessageDefinition(0x8FF88FE, "AccelerationSensor", 8)
+    msg2.signals.append(SignalDefinition("SpprtVrblTrnsRpttnRtFrAcclrtnSns", 54, 2, 1, '+', 1, 0, 0, 3, ""))
+    msg2.signals.append(SignalDefinition("VrtclAcclrtnExRngeFigureOfMerit", 52, 2, 1, '+', 1, 0, 0, 3, ""))
+    msg2.signals.append(SignalDefinition("LngtdnlAcclrtnExRngFgureOfMerit", 50, 2, 1, '+', 1, 0, 0, 3, ""))
+    msg2.signals.append(SignalDefinition("LtrlAcclrtnExRangeFigureOfMerit", 48, 2, 1, '+', 1, 0, 0, 3, ""))
+    msg2.signals.append(SignalDefinition("VerticalAccelerationExRange", 32, 16, 1, '+', 0.01, -320, -320, 322.55, "m/s/s"))
+    msg2.signals.append(SignalDefinition("LateralAccelerationExRange", 0, 16, 1, '+', 0.01, -320, -320, 322.55, "m/s/s"))
+    msg2.signals.append(SignalDefinition("LongitudinalAccelerationExRange", 16, 16, 1, '+', 0.01, -320, -320, 322.55, "m/s/s"))
+    messages.append(msg2)
     
     return messages
 
@@ -155,9 +180,31 @@ def encode_signal(signal, value, data_array):
             byte_pos += 1
             bit_pos = 0
     else:
-        # BIG ENDIAN 
-        # TODO
-        pass
+        # BIG ENDIAN implementation
+        bits_remaining = signal.length
+        current_bit = signal.start_bit
+        
+        while bits_remaining > 0:
+            byte_pos = current_bit // 8
+            bit_pos = 7 - (current_bit % 8)  # Reversed bit position for Motorola
+            
+            if byte_pos >= len(data_array):
+                break
+                
+            # How many bits to set in this byte
+            bits_in_this_byte = min(bit_pos + 1, bits_remaining)
+            
+            # Create mask for these bits
+            mask = ((1 << bits_in_this_byte) - 1) << (bit_pos - bits_in_this_byte + 1)
+            
+            # Extract corresponding bits from raw_value
+            value_bits = (raw_value >> (bits_remaining - bits_in_this_byte)) & ((1 << bits_in_this_byte) - 1)
+            
+            # Update the byte
+            data_array[byte_pos] = (data_array[byte_pos] & ~mask) | (value_bits << (bit_pos - bits_in_this_byte + 1))
+            
+            bits_remaining -= bits_in_this_byte
+            current_bit += bits_in_this_byte
 
 def create_message_data(msg_def, signal_values):
     """Create message data bytes from signal values"""
@@ -202,8 +249,31 @@ def decode_signal(signal, data_array):
             byte_pos += 1
             bit_pos = 0
     else:
-        # Big endian - not implemented in this simplified example
-        pass
+        # Big endian (Motorola) implementation
+        bits_remaining = signal.length
+        current_bit = signal.start_bit
+        
+        while bits_remaining > 0:
+            byte_pos = current_bit // 8
+            bit_pos = 7 - (current_bit % 8)  # Reversed bit position for Motorola
+            
+            if byte_pos >= len(data_array):
+                break
+                
+            # How many bits to get from this byte
+            bits_in_this_byte = min(bit_pos + 1, bits_remaining)
+            
+            # Create mask for these bits
+            mask = ((1 << bits_in_this_byte) - 1) << (bit_pos - bits_in_this_byte + 1)
+            
+            # Extract bits
+            value_bits = (data_array[byte_pos] & mask) >> (bit_pos - bits_in_this_byte + 1)
+            
+            # Add to raw value
+            raw_value |= value_bits << (bits_remaining - bits_in_this_byte)
+            
+            bits_remaining -= bits_in_this_byte
+            current_bit += bits_in_this_byte
     
     # Convert raw to physical value
     physical_value = (raw_value * signal.factor) + signal.offset
@@ -212,6 +282,7 @@ def decode_signal(signal, data_array):
 
 def decode_message(msg, message_dict):
     """Decode a CAN message based on message definitions"""
+    # Check if the message ID is in our dictionary
     if msg.arbitration_id in message_dict:
         msg_def = message_dict[msg.arbitration_id]
         
