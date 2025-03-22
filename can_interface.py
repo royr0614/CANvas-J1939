@@ -88,29 +88,54 @@ class CANInterface:
         config = self.interfaces[interface_name]
         bus = config['bus']
         callback = config['receive_callback']
-        
+    
+        self.logger.info(f"Receive thread started for interface {interface_name}")
+    
         while self.running and bus is not None:
             try:
                 # Wait for a message with timeout
+                self.logger.debug(f"Waiting for message on {interface_name}")
                 message = bus.recv(1.0)
-                if message is not None and callback is not None:
-                    # Call the callback with the message and interface name
-                    callback(message, interface_name)
+                if message is not None:
+                    self.logger.info(f"Received message on {interface_name}: ID=0x{message.arbitration_id:X}, data={[hex(b) for b in message.data]}")
+                    if callback is not None:
+                        # Call the callback with the message and interface name
+                        callback(message, interface_name)
+                    else:
+                        self.logger.warning(f"No callback set for {interface_name}")
+                else:
+                    self.logger.debug(f"No message received on {interface_name} (timeout)")
             except Exception as e:
                 self.logger.error(f"Error receiving from {interface_name}: {e}")
                 time.sleep(0.1)  # Prevent CPU overload on error
     
     def send(self, interface_name, message):
         """Send a message on a specific interface"""
-        if (interface_name in self.interfaces and 
-            self.interfaces[interface_name]['bus'] is not None and
-            self.interfaces[interface_name]['role'] in ['sender', 'both']):
-            try:
-                self.interfaces[interface_name]['bus'].send(message)
-                return True
-            except Exception as e:
-                self.logger.error(f"Error sending on {interface_name}: {e}")
-        return False
+        self.logger.info(f"Attempting to send on {interface_name}: ID=0x{message.arbitration_id:X}, is_extended={message.is_extended_id}, data={[hex(b) for b in message.data]}")
+    
+        # Check if the interface name exists
+        if interface_name not in self.interfaces:
+            self.logger.error(f"Interface '{interface_name}' not found in available interfaces: {list(self.interfaces.keys())}")
+            return False
+    
+        # Check if the bus is initialized
+        if self.interfaces[interface_name]['bus'] is None:
+            self.logger.error(f"Interface '{interface_name}' bus is None (not initialized)")
+            return False
+    
+        # Check if the interface role allows sending
+        if self.interfaces[interface_name]['role'] not in ['sender', 'both']:
+            self.logger.error(f"Interface '{interface_name}' role ({self.interfaces[interface_name]['role']}) does not allow sending")
+            return False
+    
+        # Try to send the message
+        try:
+            self.interfaces[interface_name]['bus'].send(message)
+            self.logger.info(f"Message 0x{message.arbitration_id:X} sent successfully on {interface_name}")
+            return True
+        except Exception as e:
+            self.logger.error(f"Error sending on {interface_name}: {e}")
+            return False
     
     def stop(self):
         """Stop all interfaces"""

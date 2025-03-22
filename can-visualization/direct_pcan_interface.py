@@ -70,19 +70,30 @@ class DirectPCANInterface:
     def _receive_thread(self):
         """Thread function to receive messages"""
         self.logger.info("Receiver thread running")
-        
+    
+        count = 0
         while self.running and self.receiver_bus:
             try:
                 # Wait for a message with timeout
-                message = self.receiver_bus.recv(1.0)  # 1 second timeout
+                count += 1
+                if count % 10 == 0:
+                    self.logger.info(f"DirectPCAN waiting for message (count={count})")
                 
-                if message is not None and self.receive_callback:
-                    # Call the callback with the message and interface name
-                    self.receive_callback(message, "receiver")
+                message = self.receiver_bus.recv(1.0)  # 1 second timeout
+            
+                if message is not None:
+                    self.logger.info(f"DirectPCAN received message: ID=0x{message.arbitration_id:X}, data={[hex(b) for b in message.data]}")
+                    if self.receive_callback:
+                        # Call the callback with the message and interface name
+                        self.receive_callback(message, "receiver")
+                    else:
+                        self.logger.warning("No receive callback set")
+                else:
+                    self.logger.debug("No message received (timeout)")
             except Exception as e:
                 self.logger.error(f"Receiver error: {e}")
                 time.sleep(0.1)  # Prevent CPU overload on error
-        
+    
         self.logger.info("Receiver thread stopped")
     
     def send(self, message):
@@ -142,14 +153,18 @@ class DirectPCANMessageProcessor:
     def process_message(self, msg, interface_name):
         """Process a received CAN message"""
         try:
+            self.logger.info(f"Processing message ID=0x{msg.arbitration_id:X} from {interface_name}")
+        
             # Decode the message using DBC
             decoded_data = self.dbc_parser.decode_message(msg.arbitration_id, msg.data)
-            
+        
             if decoded_data:
                 # Get message information
                 message = self.dbc_parser.get_message_by_id(msg.arbitration_id)
                 message_name = message.name if message else f"Unknown_0x{msg.arbitration_id:X}"
-                
+            
+                self.logger.info(f"Decoded message {message_name} with values {decoded_data}")
+            
                 # Notify all callbacks
                 for callback in self.callbacks:
                     callback(msg.arbitration_id, message_name, decoded_data, interface_name)
@@ -157,7 +172,7 @@ class DirectPCANMessageProcessor:
                 # Log unknown message
                 data_hex = ' '.join(f'{b:02X}' for b in msg.data)
                 self.logger.warning(f"Undecodable message: ID=0x{msg.arbitration_id:X}, Data={data_hex}")
-                
+            
         except Exception as e:
             self.logger.error(f"Error processing message: {e}")
     

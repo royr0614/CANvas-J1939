@@ -1,3 +1,1440 @@
 2025-03-22 01:52:03,179 - CANVisApp - INFO - Starting CAN visualization application
 2025-03-22 01:52:25,643 - CANVisApp - INFO - Starting CAN visualization application
 2025-03-22 01:52:53,412 - CANVisApp - INFO - Starting CAN visualization application
+2025-03-22 01:58:17,071 - CANVisApp - INFO - Starting CAN visualization application
+2025-03-22 01:59:18,475 - CANVisApp - INFO - Starting CAN visualization application
+2025-03-22 01:59:18,935 - DBCParser - INFO - Loading DBC file: CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-03-22 01:59:18,938 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-03-22 01:59:41,223 - DBCParser - INFO - Loading DBC file: C:/Users/royr0/CANvas-J1939/can-visualization/CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-03-22 01:59:41,335 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-03-22 01:59:44,528 - CANInterface - INFO - Added interface sender on PCAN_USBBUS1 with role sender
+2025-03-22 01:59:44,529 - CANInterface - INFO - Added interface receiver on PCAN_USBBUS2 with role receiver
+2025-03-22 01:59:44,550 - can.pcan - WARNING - uptime library not available, timestamps are relative to boot time and not to Epoch UTC
+2025-03-22 01:59:44,649 - CANInterface - INFO - Interface sender initialized on PCAN_USBBUS1
+2025-03-22 01:59:44,732 - CANInterface - INFO - Interface receiver initialized on PCAN_USBBUS2
+2025-03-22 01:59:44,733 - CANInterface - INFO - Started receive thread for receiver
+2025-03-22 01:59:48,009 - CANInterface - INFO - All CAN interfaces stopped
+2025-03-22 02:00:32,253 - CANInterface - INFO - Added interface sender on PCAN_USBBUS1 with role sender
+2025-03-22 02:00:32,254 - CANInterface - INFO - Added interface receiver on PCAN_USBBUS2 with role receiver
+2025-03-22 02:00:32,360 - CANInterface - INFO - Interface sender initialized on PCAN_USBBUS1
+2025-03-22 02:00:32,441 - CANInterface - INFO - Interface receiver initialized on PCAN_USBBUS2
+2025-03-22 02:00:32,442 - CANInterface - INFO - Started receive thread for receiver
+2025-03-22 02:00:36,715 - CANInterface - INFO - All CAN interfaces stopped
+2025-03-22 02:00:41,321 - DirectPCANInterface - INFO - Initializing PCAN hardware interfaces
+2025-03-22 02:00:41,414 - DirectPCANInterface - INFO - Sender bus initialized on PCAN_USBBUS1
+2025-03-22 02:00:41,501 - DirectPCANInterface - INFO - Receiver bus initialized on PCAN_USBBUS2
+2025-03-22 02:00:41,501 - DirectPCANInterface - INFO - Hardware connectivity verified
+2025-03-22 02:00:41,502 - DirectPCANInterface - INFO - Receiver thread running
+2025-03-22 02:00:41,502 - DirectPCANInterface - INFO - Receiver thread started
+2025-03-22 02:00:41,503 - DirectPCANMessageProcessor - WARNING - Undecodable message: ID=0x0, Data=00
+2025-03-22 02:00:45,307 - DirectPCANInterface - INFO - Stopping PCAN interface
+2025-03-22 02:00:45,504 - DirectPCANInterface - INFO - Receiver thread stopped
+2025-03-22 02:00:45,645 - DirectPCANInterface - INFO - Sender bus shutdown
+2025-03-22 02:00:45,776 - DirectPCANInterface - INFO - Receiver bus shutdown
+2025-03-22 02:03:27,701 - CANInterface - INFO - Added interface sender on PCAN_USBBUS1 with role sender
+2025-03-22 02:03:27,702 - CANInterface - INFO - Added interface receiver on PCAN_USBBUS2 with role receiver
+2025-03-22 02:03:27,760 - CANInterface - ERROR - Error initializing interface sender: A PCAN-Client is already connected to the PCAN-Net
+2025-03-22 02:03:27,871 - CANInterface - INFO - Interface receiver initialized on PCAN_USBBUS2
+2025-03-22 02:03:27,872 - CANInterface - INFO - Started receive thread for receiver
+2025-03-22 02:04:29,981 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:04:31,029 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:04:32,079 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:04:33,128 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:04:34,175 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:04:35,224 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:04:36,273 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:04:37,322 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:04:38,370 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:04:39,418 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:04:40,467 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:04:41,515 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:04:42,563 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:04:43,612 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:04:44,661 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:04:45,710 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:04:46,758 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:04:47,806 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:04:48,854 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:04:49,903 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:04:50,953 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:04:52,187 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:04:53,049 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:04:54,098 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:04:55,149 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:04:56,196 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:04:57,244 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:04:58,395 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:04:59,349 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:00,466 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:01,438 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:02,737 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:03,536 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:04,607 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:05,632 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:06,684 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:07,731 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:08,778 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:09,829 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:10,891 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:11,923 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:12,972 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:14,102 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:15,071 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:16,117 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:17,166 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:18,216 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:19,316 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:20,393 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:21,361 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:22,412 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:23,463 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:24,510 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:25,556 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:26,603 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:27,652 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:28,744 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:29,750 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:30,799 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:31,848 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:32,895 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:33,950 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:34,999 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:36,040 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:37,089 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:38,143 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:39,187 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:40,235 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:41,284 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:42,333 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:43,381 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:44,429 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:45,532 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:46,526 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:47,578 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:48,624 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:49,678 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:50,991 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:51,770 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:52,818 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:53,893 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:54,914 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:55,963 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:57,013 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:58,059 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:05:59,108 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:00,157 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:01,206 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:02,254 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:03,303 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:04,350 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:05,401 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:06,448 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:07,498 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:08,550 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:09,594 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:10,644 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:11,692 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:12,797 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:13,789 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:14,837 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:15,885 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:16,939 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:17,982 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:19,037 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:20,080 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:21,129 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:22,177 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:23,226 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:24,274 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:25,322 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:26,372 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:27,420 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:28,469 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:29,518 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:30,566 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:31,615 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:32,663 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:33,712 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:34,760 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:35,810 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:36,856 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:37,906 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:38,954 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:40,003 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:41,052 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:42,100 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:43,148 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:44,198 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:45,246 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:46,295 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:47,343 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:48,391 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:49,441 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:50,489 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:51,572 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:52,585 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:53,634 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:54,682 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:55,732 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:56,781 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:57,829 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:58,876 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:06:59,928 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:00,977 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:02,041 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:03,071 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:04,120 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:05,169 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:06,217 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:07,266 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:08,314 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:09,361 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:10,411 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:11,493 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:12,511 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:13,557 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:14,607 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:15,672 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:16,703 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:17,750 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:18,799 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:19,847 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:20,897 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:21,946 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:22,995 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:24,041 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:25,090 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:26,395 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:27,188 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:28,239 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:29,286 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:30,334 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:31,382 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:32,515 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:33,480 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:34,574 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:35,576 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:36,624 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:37,673 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:38,723 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:39,771 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:40,822 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:41,868 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:43,008 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:44,032 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:45,041 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:46,063 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:47,111 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:48,159 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:49,207 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:50,257 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:51,444 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:52,353 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:53,402 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:54,452 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:55,538 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:56,547 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:57,597 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:58,644 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:07:59,693 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:00,742 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:01,790 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:02,839 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:03,889 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:04,937 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:05,987 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:07,076 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:08,261 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:09,131 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:10,180 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:11,227 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:12,282 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:13,324 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:14,373 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:15,422 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:16,470 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:17,518 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:18,568 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:19,616 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:20,665 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:22,004 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:22,762 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:23,858 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:24,959 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:26,037 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:27,022 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:28,005 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:29,053 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:30,102 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:31,150 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:32,198 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:33,248 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:34,295 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:35,345 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:36,392 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:37,441 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:38,490 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:39,539 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:40,587 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:41,636 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:42,685 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:43,733 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:44,781 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:45,831 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:46,878 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:47,931 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:48,978 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:50,031 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:51,073 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:52,121 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:53,170 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:54,219 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:55,267 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:56,316 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:57,364 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:58,413 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:08:59,461 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:00,511 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:01,559 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:02,606 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:03,655 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:04,704 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:05,754 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:06,801 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:07,850 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:08,898 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:09,947 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:10,996 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:12,043 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:13,092 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:14,140 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:15,190 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:16,239 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:17,287 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:18,336 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:19,385 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:20,432 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:21,481 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:22,530 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:23,578 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:24,627 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:26,720 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:27,765 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:28,814 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:29,863 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:30,911 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:31,959 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:33,007 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:34,056 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:35,104 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:36,153 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:37,202 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:38,250 - can.pcan - WARNING - Bus error: an error counter reached the 'heavy'/'warning' limit
+2025-03-22 02:09:38,878 - CANInterface - INFO - All CAN interfaces stopped
+2025-03-22 02:10:40,517 - CANVisApp - INFO - Starting CAN visualization application
+2025-03-22 02:10:41,004 - DBCParser - INFO - Loading DBC file: CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-03-22 02:10:41,006 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-03-22 02:13:34,123 - CANVisApp - INFO - Starting CAN visualization application
+2025-03-22 02:13:34,648 - DBCParser - INFO - Loading DBC file: CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-03-22 02:13:34,650 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-03-22 02:13:55,681 - DirectPCANInterface - INFO - Initializing PCAN hardware interfaces
+2025-03-22 02:13:55,695 - can.pcan - WARNING - uptime library not available, timestamps are relative to boot time and not to Epoch UTC
+2025-03-22 02:13:55,774 - DirectPCANInterface - INFO - Sender bus initialized on PCAN_USBBUS1
+2025-03-22 02:13:55,848 - DirectPCANInterface - INFO - Receiver bus initialized on PCAN_USBBUS2
+2025-03-22 02:13:55,848 - DirectPCANInterface - INFO - Hardware connectivity verified
+2025-03-22 02:13:55,849 - DirectPCANInterface - INFO - Receiver thread running
+2025-03-22 02:13:55,850 - DirectPCANInterface - INFO - Receiver thread started
+2025-03-22 02:13:55,850 - DirectPCANMessageProcessor - WARNING - Undecodable message: ID=0x0, Data=00
+2025-03-22 02:13:59,452 - DirectPCANInterface - INFO - Stopping PCAN interface
+2025-03-22 02:13:59,851 - DirectPCANInterface - INFO - Receiver thread stopped
+2025-03-22 02:13:59,974 - DirectPCANInterface - INFO - Sender bus shutdown
+2025-03-22 02:14:00,090 - DirectPCANInterface - INFO - Receiver bus shutdown
+2025-03-22 02:14:59,372 - CANVisApp - INFO - Starting CAN visualization application
+2025-03-22 02:14:59,782 - CANVisApp - INFO - Running in simulation mode
+2025-03-22 02:14:59,783 - DBCParser - INFO - Loading DBC file: CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-03-22 02:14:59,785 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-03-22 02:15:02,303 - CANSimulator - INFO - Starting CAN simulator
+2025-03-22 02:15:03,691 - CANSimulator - INFO - Stopping CAN simulator
+2025-03-22 02:25:33,888 - CANVisApp - INFO - Starting CAN visualization application
+2025-03-22 02:25:34,503 - DBCParser - INFO - Loading DBC file: CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-03-22 02:25:34,505 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-03-22 02:25:39,055 - CANInterface - INFO - Added interface sender on PCAN_USBBUS1 with role sender
+2025-03-22 02:25:39,056 - CANInterface - INFO - Added interface receiver on PCAN_USBBUS1 with role receiver
+2025-03-22 02:25:39,073 - can.pcan - WARNING - uptime library not available, timestamps are relative to boot time and not to Epoch UTC
+2025-03-22 02:25:39,146 - CANInterface - INFO - Interface sender initialized on PCAN_USBBUS1
+2025-03-22 02:25:39,168 - CANInterface - ERROR - Error initializing interface receiver: A PCAN Channel has not been initialized yet or the initialization process has failed
+2025-03-22 02:25:40,439 - CANVisApp - INFO - Sending test messages
+2025-03-22 02:25:40,440 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 02:25:40,440 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 02:25:41,943 - CANVisApp - INFO - Sending test messages
+2025-03-22 02:25:41,943 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 02:25:41,944 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 02:25:42,711 - CANVisApp - INFO - Sending test messages
+2025-03-22 02:25:42,712 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 02:25:42,712 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 02:25:43,614 - CANVisApp - INFO - Sending test messages
+2025-03-22 02:25:43,615 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 02:25:43,615 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 02:25:46,296 - CANVisApp - INFO - Sending test messages
+2025-03-22 02:25:46,297 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 02:25:46,297 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 02:25:47,170 - CANVisApp - INFO - Sending test messages
+2025-03-22 02:25:47,171 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 02:25:47,171 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 02:25:48,027 - CANVisApp - INFO - Sending test messages
+2025-03-22 02:25:48,028 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 02:25:48,028 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 02:26:05,555 - CANInterface - INFO - All CAN interfaces stopped
+2025-03-22 02:27:24,320 - CANVisApp - INFO - Starting CAN visualization application
+2025-03-22 02:27:25,115 - DBCParser - INFO - Loading DBC file: CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-03-22 02:27:25,133 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-03-22 02:27:30,546 - CANInterface - INFO - Added interface sender on PCAN_USBBUS1 with role sender
+2025-03-22 02:27:30,546 - CANInterface - INFO - Added interface receiver on PCAN_USBBUS2 with role receiver
+2025-03-22 02:27:30,556 - can.pcan - WARNING - uptime library not available, timestamps are relative to boot time and not to Epoch UTC
+2025-03-22 02:27:30,679 - CANInterface - INFO - Interface sender initialized on PCAN_USBBUS1
+2025-03-22 02:27:30,750 - CANInterface - INFO - Interface receiver initialized on PCAN_USBBUS2
+2025-03-22 02:27:30,752 - CANInterface - INFO - Started receive thread for receiver
+2025-03-22 02:27:32,319 - CANVisApp - INFO - Sending test messages
+2025-03-22 02:27:32,319 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 02:27:32,319 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 02:27:32,421 - MessageProcessor - WARNING - Failed to send message 0x18FEF1FE
+2025-03-22 02:27:32,421 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using PCAN_USBBUS1
+2025-03-22 02:27:33,461 - CANVisApp - INFO - Sending test messages
+2025-03-22 02:27:33,462 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 02:27:33,462 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 02:27:33,564 - MessageProcessor - WARNING - Failed to send message 0x18FEF1FE
+2025-03-22 02:27:33,564 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using PCAN_USBBUS1
+2025-03-22 02:27:34,398 - CANVisApp - INFO - Sending test messages
+2025-03-22 02:27:34,398 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 02:27:34,398 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 02:27:34,500 - MessageProcessor - WARNING - Failed to send message 0x18FEF1FE
+2025-03-22 02:27:34,500 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using PCAN_USBBUS1
+2025-03-22 02:27:35,382 - CANVisApp - INFO - Sending test messages
+2025-03-22 02:27:35,382 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 02:27:35,382 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 02:27:35,483 - MessageProcessor - WARNING - Failed to send message 0x18FEF1FE
+2025-03-22 02:27:35,483 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using PCAN_USBBUS1
+2025-03-22 02:27:37,973 - CANInterface - INFO - All CAN interfaces stopped
+2025-03-22 02:34:14,353 - CANVisApp - INFO - Starting CAN visualization application
+2025-03-22 02:34:15,092 - DBCParser - INFO - Loading DBC file: CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-03-22 02:34:15,094 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-03-22 02:34:26,668 - CANVisApp - INFO - Starting CAN visualization application
+2025-03-22 02:34:27,392 - DBCParser - INFO - Loading DBC file: CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-03-22 02:34:27,394 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-03-22 02:34:30,301 - CANInterface - INFO - Added interface sender on PCAN_USBBUS1 with role sender
+2025-03-22 02:34:30,302 - CANInterface - INFO - Added interface receiver on PCAN_USBBUS2 with role receiver
+2025-03-22 02:34:30,318 - can.pcan - WARNING - uptime library not available, timestamps are relative to boot time and not to Epoch UTC
+2025-03-22 02:34:30,395 - CANInterface - INFO - Interface sender initialized on PCAN_USBBUS1
+2025-03-22 02:34:30,437 - CANInterface - ERROR - Error initializing interface receiver: The value of a handle (PCAN-Channel, PCAN-Hardware, PCAN-Net, PCAN-Client) is invalid
+2025-03-22 02:34:31,994 - CANInterface - INFO - All CAN interfaces stopped
+2025-03-22 02:36:12,707 - CANVisApp - INFO - Starting CAN visualization application
+2025-03-22 02:36:13,454 - DBCParser - INFO - Loading DBC file: CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-03-22 02:36:13,457 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-03-22 02:36:19,515 - CANInterface - INFO - Added interface sender on PCAN_USBBUS1 with role sender
+2025-03-22 02:36:19,516 - CANInterface - INFO - Added interface receiver on PCAN_USBBUS2 with role receiver
+2025-03-22 02:36:19,528 - can.pcan - WARNING - uptime library not available, timestamps are relative to boot time and not to Epoch UTC
+2025-03-22 02:36:19,609 - CANInterface - INFO - Interface sender initialized on PCAN_USBBUS1
+2025-03-22 02:36:19,674 - CANInterface - INFO - Interface receiver initialized on PCAN_USBBUS2
+2025-03-22 02:36:19,675 - CANInterface - INFO - Started receive thread for receiver
+2025-03-22 02:36:21,048 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 02:36:21,048 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 02:36:21,048 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 02:36:21,048 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 02:36:21,048 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 02:36:21,150 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 02:36:21,151 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 02:36:21,153 - MessageProcessor - WARNING - Failed to send message 0x18FEF1FE
+2025-03-22 02:36:21,154 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using PCAN_USBBUS1
+2025-03-22 02:36:22,157 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 02:36:22,157 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 02:36:22,158 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 02:36:22,158 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 02:36:22,160 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 02:36:22,261 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 02:36:22,261 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 02:36:22,262 - MessageProcessor - WARNING - Failed to send message 0x18FEF1FE
+2025-03-22 02:36:22,262 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using PCAN_USBBUS1
+2025-03-22 02:36:23,044 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 02:36:23,044 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 02:36:23,044 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 02:36:23,045 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 02:36:23,045 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 02:36:23,146 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 02:36:23,146 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 02:36:23,147 - MessageProcessor - WARNING - Failed to send message 0x18FEF1FE
+2025-03-22 02:36:23,147 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using PCAN_USBBUS1
+2025-03-22 02:36:24,891 - CANInterface - INFO - All CAN interfaces stopped
+2025-03-22 02:42:52,656 - CANVisApp - INFO - Starting CAN visualization application
+2025-03-22 02:42:53,502 - DBCParser - INFO - Loading DBC file: CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-03-22 02:42:53,505 - DBCParser - INFO - Loading message: EEC1, ID: 0xCF004FE
+2025-03-22 02:42:53,506 - DBCParser - INFO - Loading message: CCVS1, ID: 0x18FEF1FE
+2025-03-22 02:42:53,506 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-03-22 02:42:58,249 - CANInterface - INFO - Added interface sender on PCAN_USBBUS1 with role sender
+2025-03-22 02:42:58,249 - CANInterface - INFO - Added interface receiver on PCAN_USBBUS2 with role receiver
+2025-03-22 02:42:58,262 - can.pcan - WARNING - uptime library not available, timestamps are relative to boot time and not to Epoch UTC
+2025-03-22 02:42:58,338 - CANInterface - INFO - Interface sender initialized on PCAN_USBBUS1
+2025-03-22 02:42:58,406 - CANInterface - INFO - Interface receiver initialized on PCAN_USBBUS2
+2025-03-22 02:42:58,407 - CANInterface - INFO - Started receive thread for receiver
+2025-03-22 02:42:59,788 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 02:42:59,788 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 02:42:59,789 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 02:42:59,789 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 02:42:59,789 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 02:42:59,789 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 02:42:59,789 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 02:42:59,789 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 02:42:59,891 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 02:42:59,892 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 02:42:59,892 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 02:42:59,893 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 02:42:59,893 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 02:42:59,893 - MessageProcessor - WARNING - Failed to send message 0x18FEF1FE
+2025-03-22 02:42:59,894 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using PCAN_USBBUS1
+2025-03-22 02:43:00,698 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 02:43:00,698 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 02:43:00,698 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 02:43:00,699 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 02:43:00,699 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 02:43:00,699 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 02:43:00,700 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 02:43:00,700 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 02:43:00,801 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 02:43:00,801 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 02:43:00,801 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 02:43:00,803 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 02:43:00,803 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 02:43:00,803 - MessageProcessor - WARNING - Failed to send message 0x18FEF1FE
+2025-03-22 02:43:00,803 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using PCAN_USBBUS1
+2025-03-22 02:43:01,257 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 02:43:01,258 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 02:43:01,258 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 02:43:01,258 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 02:43:01,258 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 02:43:01,259 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 02:43:01,259 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 02:43:01,259 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 02:43:01,360 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 02:43:01,361 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 02:43:01,361 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 02:43:01,361 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 02:43:01,362 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 02:43:01,362 - MessageProcessor - WARNING - Failed to send message 0x18FEF1FE
+2025-03-22 02:43:01,362 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using PCAN_USBBUS1
+2025-03-22 02:43:02,643 - CANInterface - INFO - All CAN interfaces stopped
+2025-03-22 02:44:55,038 - CANVisApp - INFO - Starting CAN visualization application
+2025-03-22 02:44:55,851 - DBCParser - INFO - Loading DBC file: CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-03-22 02:44:55,855 - DBCParser - INFO - Loading message: EEC1, ID: 0xCF004FE
+2025-03-22 02:44:55,856 - DBCParser - INFO - Loading message: CCVS1, ID: 0x18FEF1FE
+2025-03-22 02:44:55,856 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-03-22 02:45:01,901 - CANInterface - INFO - Added interface sender on PCAN_USBBUS1 with role sender
+2025-03-22 02:45:01,902 - CANInterface - INFO - Added interface receiver on PCAN_USBBUS2 with role receiver
+2025-03-22 02:45:01,914 - can.pcan - WARNING - uptime library not available, timestamps are relative to boot time and not to Epoch UTC
+2025-03-22 02:45:01,993 - CANInterface - INFO - Interface sender initialized on PCAN_USBBUS1
+2025-03-22 02:45:02,068 - CANInterface - INFO - Interface receiver initialized on PCAN_USBBUS2
+2025-03-22 02:45:02,069 - CANInterface - INFO - Started receive thread for receiver
+2025-03-22 02:45:03,109 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 02:45:03,110 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 02:45:03,110 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 02:45:03,110 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 02:45:03,112 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 02:45:03,112 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 02:45:03,112 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 02:45:03,113 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 02:45:03,213 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 02:45:03,213 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 02:45:03,214 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 02:45:03,215 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 02:45:03,215 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 02:45:03,216 - MessageProcessor - WARNING - Failed to send message 0x18FEF1FE
+2025-03-22 02:45:03,216 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using PCAN_USBBUS1
+2025-03-22 02:45:03,878 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 02:45:03,880 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 02:45:03,880 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 02:45:03,880 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 02:45:03,881 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 02:45:03,881 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 02:45:03,881 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 02:45:03,881 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 02:45:03,982 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 02:45:03,982 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 02:45:03,982 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 02:45:03,984 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 02:45:03,984 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 02:45:03,984 - MessageProcessor - WARNING - Failed to send message 0x18FEF1FE
+2025-03-22 02:45:03,985 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using PCAN_USBBUS1
+2025-03-22 02:45:04,326 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 02:45:04,326 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 02:45:04,326 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 02:45:04,326 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 02:45:04,327 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 02:45:04,327 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 02:45:04,327 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 02:45:04,327 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 02:45:04,429 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 02:45:04,429 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 02:45:04,429 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 02:45:04,430 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 02:45:04,430 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 02:45:04,431 - MessageProcessor - WARNING - Failed to send message 0x18FEF1FE
+2025-03-22 02:45:04,431 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using PCAN_USBBUS1
+2025-03-22 02:45:08,280 - CANInterface - INFO - All CAN interfaces stopped
+2025-03-22 02:49:29,597 - CANVisApp - INFO - Starting CAN visualization application
+2025-03-22 02:49:30,378 - DBCParser - INFO - Loading DBC file: CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-03-22 02:49:30,380 - DBCParser - INFO - Loading message: EEC1, ID: 0xCF004FE
+2025-03-22 02:49:30,381 - DBCParser - INFO - Loading message: CCVS1, ID: 0x18FEF1FE
+2025-03-22 02:49:30,381 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-03-22 02:49:34,396 - CANInterface - INFO - Added interface sender on PCAN_USBBUS1 with role sender
+2025-03-22 02:49:34,397 - CANInterface - INFO - Added interface receiver on PCAN_USBBUS2 with role receiver
+2025-03-22 02:49:34,408 - can.pcan - WARNING - uptime library not available, timestamps are relative to boot time and not to Epoch UTC
+2025-03-22 02:49:34,494 - CANInterface - INFO - Interface sender initialized on PCAN_USBBUS1
+2025-03-22 02:49:34,527 - CANInterface - ERROR - Error initializing interface receiver: The value of a handle (PCAN-Channel, PCAN-Hardware, PCAN-Net, PCAN-Client) is invalid
+2025-03-22 02:49:35,324 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 02:49:35,325 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 02:49:35,325 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 02:49:35,326 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 02:49:35,326 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 02:49:35,327 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 02:49:35,327 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 02:49:35,327 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 02:49:35,429 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 02:49:35,430 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 02:49:35,430 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 02:49:35,430 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 02:49:35,431 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 02:49:35,431 - MessageProcessor - WARNING - Failed to send message 0x18FEF1FE
+2025-03-22 02:49:35,431 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using PCAN_USBBUS1
+2025-03-22 02:49:35,760 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 02:49:35,760 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 02:49:35,762 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 02:49:35,762 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 02:49:35,763 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 02:49:35,763 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 02:49:35,763 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 02:49:35,763 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 02:49:35,864 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 02:49:35,865 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 02:49:35,866 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 02:49:35,866 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 02:49:35,867 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 02:49:35,867 - MessageProcessor - WARNING - Failed to send message 0x18FEF1FE
+2025-03-22 02:49:35,868 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using PCAN_USBBUS1
+2025-03-22 02:49:36,027 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 02:49:36,028 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 02:49:36,028 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 02:49:36,028 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 02:49:36,029 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 02:49:36,029 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 02:49:36,029 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 02:49:36,029 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 02:49:36,131 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 02:49:36,131 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 02:49:36,132 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 02:49:36,132 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 02:49:36,133 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 02:49:36,133 - MessageProcessor - WARNING - Failed to send message 0x18FEF1FE
+2025-03-22 02:49:36,134 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using PCAN_USBBUS1
+2025-03-22 02:49:36,580 - CANInterface - INFO - All CAN interfaces stopped
+2025-03-22 02:49:56,019 - CANVisApp - INFO - Starting CAN visualization application
+2025-03-22 02:49:56,926 - DBCParser - INFO - Loading DBC file: CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-03-22 02:49:56,929 - DBCParser - INFO - Loading message: EEC1, ID: 0xCF004FE
+2025-03-22 02:49:56,930 - DBCParser - INFO - Loading message: CCVS1, ID: 0x18FEF1FE
+2025-03-22 02:49:56,930 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-03-22 02:50:02,648 - CANInterface - INFO - Added interface sender on PCAN_USBBUS1 with role sender
+2025-03-22 02:50:02,648 - CANInterface - INFO - Added interface receiver on PCAN_USBBUS2 with role receiver
+2025-03-22 02:50:02,661 - can.pcan - WARNING - uptime library not available, timestamps are relative to boot time and not to Epoch UTC
+2025-03-22 02:50:02,749 - CANInterface - INFO - Interface sender initialized on PCAN_USBBUS1
+2025-03-22 02:50:02,782 - CANInterface - ERROR - Error initializing interface receiver: The value of a handle (PCAN-Channel, PCAN-Hardware, PCAN-Net, PCAN-Client) is invalid
+2025-03-22 02:50:05,048 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 02:50:05,048 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 02:50:05,049 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 02:50:05,049 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 02:50:05,050 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 02:50:05,050 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 02:50:05,051 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 02:50:05,051 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 02:50:05,153 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 02:50:05,154 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 02:50:05,154 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 02:50:05,155 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 02:50:05,155 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 02:50:05,156 - MessageProcessor - WARNING - Failed to send message 0x18FEF1FE
+2025-03-22 02:50:05,156 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using PCAN_USBBUS1
+2025-03-22 02:50:05,482 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 02:50:05,482 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 02:50:05,483 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 02:50:05,483 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 02:50:05,484 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 02:50:05,484 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 02:50:05,485 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 02:50:05,485 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 02:50:05,586 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 02:50:05,586 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 02:50:05,587 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 02:50:05,587 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 02:50:05,588 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 02:50:05,588 - MessageProcessor - WARNING - Failed to send message 0x18FEF1FE
+2025-03-22 02:50:05,588 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using PCAN_USBBUS1
+2025-03-22 02:50:06,072 - CANInterface - INFO - All CAN interfaces stopped
+2025-03-22 02:50:27,592 - CANVisApp - INFO - Starting CAN visualization application
+2025-03-22 02:50:28,469 - DBCParser - INFO - Loading DBC file: CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-03-22 02:50:28,472 - DBCParser - INFO - Loading message: EEC1, ID: 0xCF004FE
+2025-03-22 02:50:28,472 - DBCParser - INFO - Loading message: CCVS1, ID: 0x18FEF1FE
+2025-03-22 02:50:28,473 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-03-22 02:50:32,871 - CANInterface - INFO - Added interface sender on PCAN_USBBUS1 with role sender
+2025-03-22 02:50:32,872 - CANInterface - INFO - Added interface receiver on PCAN_USBBUS2 with role receiver
+2025-03-22 02:50:32,883 - can.pcan - WARNING - uptime library not available, timestamps are relative to boot time and not to Epoch UTC
+2025-03-22 02:50:32,964 - CANInterface - INFO - Interface sender initialized on PCAN_USBBUS1
+2025-03-22 02:50:33,030 - CANInterface - INFO - Interface receiver initialized on PCAN_USBBUS2
+2025-03-22 02:50:33,032 - CANInterface - INFO - Started receive thread for receiver
+2025-03-22 02:50:34,231 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 02:50:34,232 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 02:50:34,232 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 02:50:34,232 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 02:50:34,232 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 02:50:34,232 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 02:50:34,232 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 02:50:34,234 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 02:50:34,335 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 02:50:34,336 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 02:50:34,336 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 02:50:34,337 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 02:50:34,337 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 02:50:34,337 - MessageProcessor - WARNING - Failed to send message 0x18FEF1FE
+2025-03-22 02:50:34,338 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using PCAN_USBBUS1
+2025-03-22 02:50:34,910 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 02:50:34,911 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 02:50:34,911 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 02:50:34,912 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 02:50:34,912 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 02:50:34,913 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 02:50:34,913 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 02:50:34,914 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 02:50:35,015 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 02:50:35,015 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 02:50:35,016 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 02:50:35,016 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 02:50:35,017 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 02:50:35,017 - MessageProcessor - WARNING - Failed to send message 0x18FEF1FE
+2025-03-22 02:50:35,018 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using PCAN_USBBUS1
+2025-03-22 02:50:35,392 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 02:50:35,393 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 02:50:35,393 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 02:50:35,394 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 02:50:35,394 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 02:50:35,395 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 02:50:35,395 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 02:50:35,396 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 02:50:35,497 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 02:50:35,498 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 02:50:35,499 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 02:50:35,499 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 02:50:35,500 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 02:50:35,500 - MessageProcessor - WARNING - Failed to send message 0x18FEF1FE
+2025-03-22 02:50:35,501 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using PCAN_USBBUS1
+2025-03-22 02:50:37,257 - CANInterface - INFO - All CAN interfaces stopped
+2025-03-22 02:59:58,686 - CANVisApp - INFO - Starting CAN visualization application
+2025-03-22 02:59:59,460 - DBCParser - INFO - Loading DBC file: CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-03-22 02:59:59,463 - DBCParser - INFO - Loading message: EEC1, ID: 0xCF004FE
+2025-03-22 02:59:59,463 - DBCParser - INFO - Loading message: CCVS1, ID: 0x18FEF1FE
+2025-03-22 02:59:59,463 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-03-22 03:00:06,179 - CANInterface - INFO - Added interface sender on PCAN_USBBUS1 with role sender
+2025-03-22 03:00:06,179 - CANInterface - INFO - Added interface receiver on PCAN_USBBUS2 with role receiver
+2025-03-22 03:00:06,190 - can.pcan - WARNING - uptime library not available, timestamps are relative to boot time and not to Epoch UTC
+2025-03-22 03:00:06,258 - CANInterface - INFO - Interface sender initialized on PCAN_USBBUS1
+2025-03-22 03:00:06,331 - CANInterface - INFO - Interface receiver initialized on PCAN_USBBUS2
+2025-03-22 03:00:06,332 - CANInterface - INFO - Started receive thread for receiver
+2025-03-22 03:00:07,864 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 03:00:07,865 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 03:00:07,865 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 03:00:07,866 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 03:00:07,866 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 03:00:07,866 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 03:00:07,866 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:00:07,868 - MessageProcessor - ERROR - Direct send error: 'PCAN_USBBUS1'
+2025-03-22 03:00:07,868 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 03:00:07,869 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 03:00:07,970 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:00:07,971 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 03:00:07,972 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 03:00:07,973 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 03:00:07,974 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 03:00:07,974 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:00:07,975 - MessageProcessor - ERROR - Direct send error: 'PCAN_USBBUS1'
+2025-03-22 03:00:07,976 - MessageProcessor - WARNING - Failed to send message 0x18FEF1FE
+2025-03-22 03:00:07,976 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using PCAN_USBBUS1
+2025-03-22 03:00:08,422 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 03:00:08,422 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 03:00:08,422 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 03:00:08,423 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 03:00:08,423 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 03:00:08,423 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 03:00:08,423 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:00:08,423 - MessageProcessor - ERROR - Direct send error: 'PCAN_USBBUS1'
+2025-03-22 03:00:08,425 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 03:00:08,425 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 03:00:08,526 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:00:08,527 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 03:00:08,528 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 03:00:08,528 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 03:00:08,529 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 03:00:08,530 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:00:08,530 - MessageProcessor - ERROR - Direct send error: 'PCAN_USBBUS1'
+2025-03-22 03:00:08,531 - MessageProcessor - WARNING - Failed to send message 0x18FEF1FE
+2025-03-22 03:00:08,531 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using PCAN_USBBUS1
+2025-03-22 03:00:11,539 - CANInterface - INFO - All CAN interfaces stopped
+2025-03-22 03:02:07,134 - CANVisApp - INFO - Starting CAN visualization application
+2025-03-22 03:02:07,856 - DBCParser - INFO - Loading DBC file: CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-03-22 03:02:07,859 - DBCParser - INFO - Loading message: EEC1, ID: 0xCF004FE
+2025-03-22 03:02:07,859 - DBCParser - INFO - Loading message: CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:02:07,860 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-03-22 03:02:16,764 - CANInterface - INFO - Added interface sender on PCAN_USBBUS1 with role sender
+2025-03-22 03:02:16,765 - CANInterface - INFO - Added interface receiver on PCAN_USBBUS2 with role receiver
+2025-03-22 03:02:16,776 - can.pcan - WARNING - uptime library not available, timestamps are relative to boot time and not to Epoch UTC
+2025-03-22 03:02:16,849 - CANInterface - INFO - Interface sender initialized on PCAN_USBBUS1
+2025-03-22 03:02:16,922 - CANInterface - INFO - Interface receiver initialized on PCAN_USBBUS2
+2025-03-22 03:02:16,922 - CANInterface - INFO - Started receive thread for receiver
+2025-03-22 03:02:19,393 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 03:02:19,393 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 03:02:19,393 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 03:02:19,393 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 03:02:19,395 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 03:02:19,395 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 03:02:19,395 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:02:19,395 - MessageProcessor - ERROR - Interface PCAN_USBBUS1 not found
+2025-03-22 03:02:19,396 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 03:02:19,396 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 03:02:19,497 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:02:19,498 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 03:02:19,499 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 03:02:19,500 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 03:02:19,500 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 03:02:19,501 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:02:19,501 - MessageProcessor - ERROR - Interface PCAN_USBBUS1 not found
+2025-03-22 03:02:19,502 - MessageProcessor - WARNING - Failed to send message 0x18FEF1FE
+2025-03-22 03:02:19,502 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using PCAN_USBBUS1
+2025-03-22 03:02:20,124 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 03:02:20,124 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 03:02:20,125 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 03:02:20,125 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 03:02:20,125 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 03:02:20,125 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 03:02:20,125 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:02:20,127 - MessageProcessor - ERROR - Interface PCAN_USBBUS1 not found
+2025-03-22 03:02:20,127 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 03:02:20,127 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 03:02:20,228 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:02:20,229 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 03:02:20,231 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 03:02:20,231 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 03:02:20,232 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 03:02:20,233 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:02:20,233 - MessageProcessor - ERROR - Interface PCAN_USBBUS1 not found
+2025-03-22 03:02:20,234 - MessageProcessor - WARNING - Failed to send message 0x18FEF1FE
+2025-03-22 03:02:20,235 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using PCAN_USBBUS1
+2025-03-22 03:02:20,823 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 03:02:20,824 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 03:02:20,824 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 03:02:20,825 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 03:02:20,825 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 03:02:20,826 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 03:02:20,826 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:02:20,826 - MessageProcessor - ERROR - Interface PCAN_USBBUS1 not found
+2025-03-22 03:02:20,827 - MessageProcessor - WARNING - Failed to send message 0xCF004FE
+2025-03-22 03:02:20,827 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using PCAN_USBBUS1
+2025-03-22 03:02:20,928 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:02:20,928 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 03:02:20,928 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 03:02:20,928 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 03:02:20,930 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 03:02:20,930 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:02:20,930 - MessageProcessor - ERROR - Interface PCAN_USBBUS1 not found
+2025-03-22 03:02:20,930 - MessageProcessor - WARNING - Failed to send message 0x18FEF1FE
+2025-03-22 03:02:20,930 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using PCAN_USBBUS1
+2025-03-22 03:02:22,130 - CANInterface - INFO - All CAN interfaces stopped
+2025-03-22 03:04:19,699 - CANVisApp - INFO - Starting CAN visualization application
+2025-03-22 03:04:20,388 - DBCParser - INFO - Loading DBC file: CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-03-22 03:04:20,390 - DBCParser - INFO - Loading message: EEC1, ID: 0xCF004FE
+2025-03-22 03:04:20,391 - DBCParser - INFO - Loading message: CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:04:20,391 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-03-22 03:04:24,412 - CANInterface - INFO - Added interface sender on PCAN_USBBUS1 with role sender
+2025-03-22 03:04:24,413 - CANInterface - INFO - Added interface receiver on PCAN_USBBUS2 with role receiver
+2025-03-22 03:04:24,423 - can.pcan - WARNING - uptime library not available, timestamps are relative to boot time and not to Epoch UTC
+2025-03-22 03:04:24,501 - CANInterface - INFO - Interface sender initialized on PCAN_USBBUS1
+2025-03-22 03:04:24,574 - CANInterface - INFO - Interface receiver initialized on PCAN_USBBUS2
+2025-03-22 03:04:24,575 - CANInterface - INFO - Started receive thread for receiver
+2025-03-22 03:04:25,922 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 03:04:25,922 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 03:04:25,923 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 03:04:25,923 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 03:04:25,925 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 03:04:25,925 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 03:04:25,925 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:04:25,925 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:04:25,925 - MessageProcessor - INFO - Sent message 0xCF004FE on sender
+2025-03-22 03:04:25,926 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using standard interface: True
+2025-03-22 03:04:26,027 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:04:26,028 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 03:04:26,028 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 03:04:26,030 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 03:04:26,030 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 03:04:26,031 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:04:26,031 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:04:26,032 - MessageProcessor - INFO - Sent message 0x18FEF1FE on sender
+2025-03-22 03:04:26,032 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using standard interface: True
+2025-03-22 03:04:26,698 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 03:04:26,699 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 03:04:26,699 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 03:04:26,699 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 03:04:26,700 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 03:04:26,700 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 03:04:26,700 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:04:26,700 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:04:26,701 - MessageProcessor - INFO - Sent message 0xCF004FE on sender
+2025-03-22 03:04:26,701 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using standard interface: True
+2025-03-22 03:04:26,802 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:04:26,803 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 03:04:26,803 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 03:04:26,804 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 03:04:26,804 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 03:04:26,805 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:04:26,805 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:04:26,806 - MessageProcessor - INFO - Sent message 0x18FEF1FE on sender
+2025-03-22 03:04:26,806 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using standard interface: True
+2025-03-22 03:04:27,327 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 03:04:27,327 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 03:04:27,327 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 03:04:27,327 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 03:04:27,328 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 03:04:27,328 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 03:04:27,328 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:04:27,328 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:04:27,328 - MessageProcessor - INFO - Sent message 0xCF004FE on sender
+2025-03-22 03:04:27,330 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using standard interface: True
+2025-03-22 03:04:27,430 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:04:27,430 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 03:04:27,430 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 03:04:27,432 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 03:04:27,432 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 03:04:27,433 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:04:27,433 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:04:27,433 - MessageProcessor - INFO - Sent message 0x18FEF1FE on sender
+2025-03-22 03:04:27,434 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using standard interface: True
+2025-03-22 03:04:28,655 - CANInterface - INFO - All CAN interfaces stopped
+2025-03-22 03:05:02,783 - CANVisApp - INFO - Starting CAN visualization application
+2025-03-22 03:05:03,482 - DBCParser - INFO - Loading DBC file: CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-03-22 03:05:03,485 - DBCParser - INFO - Loading message: EEC1, ID: 0xCF004FE
+2025-03-22 03:05:03,486 - DBCParser - INFO - Loading message: CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:05:03,487 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-03-22 03:05:15,104 - CANInterface - INFO - Added interface sender on PCAN_USBBUS1 with role sender
+2025-03-22 03:05:15,104 - CANInterface - INFO - Added interface receiver on PCAN_USBBUS2 with role receiver
+2025-03-22 03:05:15,119 - can.pcan - WARNING - uptime library not available, timestamps are relative to boot time and not to Epoch UTC
+2025-03-22 03:05:15,202 - CANInterface - INFO - Interface sender initialized on PCAN_USBBUS1
+2025-03-22 03:05:15,270 - CANInterface - INFO - Interface receiver initialized on PCAN_USBBUS2
+2025-03-22 03:05:15,271 - CANInterface - INFO - Started receive thread for receiver
+2025-03-22 03:05:16,588 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 03:05:16,589 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 03:05:16,589 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 03:05:16,589 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 03:05:16,590 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 03:05:16,590 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 03:05:16,590 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:05:16,591 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:05:16,592 - MessageProcessor - INFO - Sent message 0xCF004FE on sender
+2025-03-22 03:05:16,592 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using standard interface: True
+2025-03-22 03:05:16,693 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:05:16,694 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 03:05:16,695 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 03:05:16,695 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 03:05:16,696 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 03:05:16,696 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:05:16,697 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:05:16,697 - MessageProcessor - INFO - Sent message 0x18FEF1FE on sender
+2025-03-22 03:05:16,698 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using standard interface: True
+2025-03-22 03:05:16,935 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 03:05:16,935 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 03:05:16,935 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 03:05:16,935 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 03:05:16,935 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 03:05:16,936 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 03:05:16,936 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:05:16,936 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:05:16,937 - MessageProcessor - INFO - Sent message 0xCF004FE on sender
+2025-03-22 03:05:16,937 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using standard interface: True
+2025-03-22 03:05:17,038 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:05:17,039 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 03:05:17,040 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 03:05:17,040 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 03:05:17,041 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 03:05:17,041 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:05:17,041 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:05:17,042 - MessageProcessor - INFO - Sent message 0x18FEF1FE on sender
+2025-03-22 03:05:17,042 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using standard interface: True
+2025-03-22 03:05:17,150 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 03:05:17,151 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 03:05:17,152 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 03:05:17,152 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 03:05:17,152 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 03:05:17,152 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 03:05:17,152 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:05:17,153 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:05:17,153 - MessageProcessor - INFO - Sent message 0xCF004FE on sender
+2025-03-22 03:05:17,153 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using standard interface: True
+2025-03-22 03:05:17,254 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:05:17,254 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 03:05:17,254 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 03:05:17,255 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 03:05:17,255 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 03:05:17,255 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:05:17,256 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:05:17,256 - MessageProcessor - INFO - Sent message 0x18FEF1FE on sender
+2025-03-22 03:05:17,257 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using standard interface: True
+2025-03-22 03:05:22,465 - CANInterface - INFO - All CAN interfaces stopped
+2025-03-22 03:07:46,918 - CANVisApp - INFO - Starting CAN visualization application
+2025-03-22 03:07:47,836 - DBCParser - INFO - Loading DBC file: CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-03-22 03:07:47,839 - DBCParser - INFO - Loading message: EEC1, ID: 0xCF004FE
+2025-03-22 03:07:47,840 - DBCParser - INFO - Loading message: CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:07:47,840 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-03-22 03:07:54,816 - CANInterface - INFO - Added interface sender on PCAN_USBBUS1 with role sender
+2025-03-22 03:07:54,817 - CANInterface - INFO - Added interface receiver on PCAN_USBBUS2 with role receiver
+2025-03-22 03:07:54,828 - can.pcan - WARNING - uptime library not available, timestamps are relative to boot time and not to Epoch UTC
+2025-03-22 03:07:54,917 - CANInterface - INFO - Interface sender initialized on PCAN_USBBUS1
+2025-03-22 03:07:54,990 - CANInterface - INFO - Interface receiver initialized on PCAN_USBBUS2
+2025-03-22 03:07:54,991 - CANInterface - INFO - Started receive thread for receiver
+2025-03-22 03:07:56,331 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 03:07:56,332 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 03:07:56,332 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 03:07:56,333 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 03:07:56,333 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 03:07:56,333 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 03:07:56,333 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:07:56,333 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:07:56,335 - MessageProcessor - INFO - Sent message 0xCF004FE on sender
+2025-03-22 03:07:56,335 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using standard interface: True
+2025-03-22 03:07:56,435 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:07:56,435 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 03:07:56,436 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 03:07:56,437 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 03:07:56,437 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 03:07:56,438 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:07:56,439 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:07:56,439 - MessageProcessor - INFO - Sent message 0x18FEF1FE on sender
+2025-03-22 03:07:56,439 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using standard interface: True
+2025-03-22 03:07:56,899 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 03:07:56,899 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 03:07:56,901 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 03:07:56,901 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 03:07:56,901 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 03:07:56,901 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 03:07:56,902 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:07:56,902 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:07:56,902 - MessageProcessor - INFO - Sent message 0xCF004FE on sender
+2025-03-22 03:07:56,903 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using standard interface: True
+2025-03-22 03:07:57,004 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:07:57,005 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 03:07:57,005 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 03:07:57,005 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 03:07:57,006 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 03:07:57,006 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:07:57,007 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:07:57,007 - MessageProcessor - INFO - Sent message 0x18FEF1FE on sender
+2025-03-22 03:07:57,008 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using standard interface: True
+2025-03-22 03:07:57,507 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 03:07:57,507 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 03:07:57,509 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 03:07:57,509 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 03:07:57,509 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 03:07:57,510 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 03:07:57,510 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:07:57,510 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:07:57,511 - MessageProcessor - INFO - Sent message 0xCF004FE on sender
+2025-03-22 03:07:57,511 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using standard interface: True
+2025-03-22 03:07:57,612 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:07:57,612 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 03:07:57,614 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 03:07:57,614 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 03:07:57,615 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 03:07:57,616 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:07:57,617 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:07:57,618 - MessageProcessor - INFO - Sent message 0x18FEF1FE on sender
+2025-03-22 03:07:57,618 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using standard interface: True
+2025-03-22 03:07:59,847 - CANInterface - INFO - All CAN interfaces stopped
+2025-03-22 03:08:16,329 - CANVisApp - INFO - Starting CAN visualization application
+2025-03-22 03:08:17,169 - DBCParser - INFO - Loading DBC file: CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-03-22 03:08:17,172 - DBCParser - INFO - Loading message: EEC1, ID: 0xCF004FE
+2025-03-22 03:08:17,172 - DBCParser - INFO - Loading message: CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:08:17,173 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-03-22 03:08:20,608 - CANInterface - INFO - Added interface sender on PCAN_USBBUS1 with role sender
+2025-03-22 03:08:20,609 - CANInterface - INFO - Added interface receiver on PCAN_USBBUS2 with role receiver
+2025-03-22 03:08:20,621 - can.pcan - WARNING - uptime library not available, timestamps are relative to boot time and not to Epoch UTC
+2025-03-22 03:08:20,702 - CANInterface - INFO - Interface sender initialized on PCAN_USBBUS1
+2025-03-22 03:08:20,767 - CANInterface - INFO - Interface receiver initialized on PCAN_USBBUS2
+2025-03-22 03:08:20,768 - CANInterface - INFO - Started receive thread for receiver
+2025-03-22 03:08:22,096 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 03:08:22,097 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 03:08:22,098 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 03:08:22,098 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 03:08:22,098 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 03:08:22,099 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 03:08:22,099 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:08:22,099 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:08:22,100 - MessageProcessor - INFO - Sent message 0xCF004FE on sender
+2025-03-22 03:08:22,100 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using standard interface: True
+2025-03-22 03:08:22,201 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:08:22,201 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 03:08:22,202 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 03:08:22,202 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 03:08:22,203 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 03:08:22,203 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:08:22,203 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:08:22,204 - MessageProcessor - INFO - Sent message 0x18FEF1FE on sender
+2025-03-22 03:08:22,204 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using standard interface: True
+2025-03-22 03:08:22,552 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 03:08:22,552 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 03:08:22,553 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 03:08:22,553 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 03:08:22,553 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 03:08:22,553 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 03:08:22,554 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:08:22,554 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:08:22,554 - MessageProcessor - INFO - Sent message 0xCF004FE on sender
+2025-03-22 03:08:22,554 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using standard interface: True
+2025-03-22 03:08:22,655 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:08:22,655 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 03:08:22,655 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 03:08:22,657 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 03:08:22,657 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 03:08:22,658 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:08:22,658 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:08:22,658 - MessageProcessor - INFO - Sent message 0x18FEF1FE on sender
+2025-03-22 03:08:22,659 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using standard interface: True
+2025-03-22 03:08:22,991 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 03:08:22,991 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 03:08:22,992 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 03:08:22,992 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 03:08:22,993 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 03:08:22,993 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 03:08:22,994 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:08:22,994 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:08:22,995 - MessageProcessor - INFO - Sent message 0xCF004FE on sender
+2025-03-22 03:08:22,995 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using standard interface: True
+2025-03-22 03:08:23,096 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:08:23,096 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 03:08:23,098 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 03:08:23,098 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 03:08:23,099 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 03:08:23,099 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:08:23,100 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:08:23,100 - MessageProcessor - INFO - Sent message 0x18FEF1FE on sender
+2025-03-22 03:08:23,101 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using standard interface: True
+2025-03-22 03:08:24,309 - CANInterface - INFO - All CAN interfaces stopped
+2025-03-22 03:14:20,804 - CANVisApp - INFO - Starting CAN visualization application
+2025-03-22 03:14:21,674 - DBCParser - INFO - Loading DBC file: CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-03-22 03:14:21,678 - DBCParser - INFO - Loading message: EEC1, ID: 0xCF004FE
+2025-03-22 03:14:21,678 - DBCParser - INFO - Loading message: CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:14:21,678 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-03-22 03:14:29,446 - CANInterface - INFO - Added interface sender on PCAN_USBBUS1 with role sender
+2025-03-22 03:14:29,447 - CANInterface - INFO - Added interface receiver on PCAN_USBBUS2 with role receiver
+2025-03-22 03:14:29,459 - can.pcan - WARNING - uptime library not available, timestamps are relative to boot time and not to Epoch UTC
+2025-03-22 03:14:29,539 - CANInterface - INFO - Interface sender initialized on PCAN_USBBUS1
+2025-03-22 03:14:29,608 - CANInterface - INFO - Interface receiver initialized on PCAN_USBBUS2
+2025-03-22 03:14:29,609 - CANInterface - INFO - Started receive thread for receiver
+2025-03-22 03:14:31,517 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 03:14:31,518 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 03:14:31,518 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 03:14:31,519 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 03:14:31,519 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 03:14:31,520 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 03:14:31,520 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:14:31,521 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:14:31,521 - MessageProcessor - INFO - Sent message 0xCF004FE on sender
+2025-03-22 03:14:31,521 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using standard interface: True
+2025-03-22 03:14:31,622 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:14:31,622 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 03:14:31,623 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 03:14:31,623 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 03:14:31,624 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 03:14:31,624 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:14:31,624 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:14:31,625 - MessageProcessor - INFO - Sent message 0x18FEF1FE on sender
+2025-03-22 03:14:31,625 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using standard interface: True
+2025-03-22 03:14:32,118 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 03:14:32,118 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 03:14:32,119 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 03:14:32,119 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 03:14:32,120 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 03:14:32,121 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 03:14:32,121 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:14:32,121 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:14:32,122 - MessageProcessor - INFO - Sent message 0xCF004FE on sender
+2025-03-22 03:14:32,122 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using standard interface: True
+2025-03-22 03:14:32,223 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:14:32,223 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 03:14:32,224 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 03:14:32,224 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 03:14:32,225 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 03:14:32,225 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:14:32,225 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:14:32,226 - MessageProcessor - INFO - Sent message 0x18FEF1FE on sender
+2025-03-22 03:14:32,226 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using standard interface: True
+2025-03-22 03:14:33,444 - CANInterface - INFO - All CAN interfaces stopped
+2025-03-22 03:15:00,957 - CANVisApp - INFO - Starting CAN visualization application
+2025-03-22 03:15:01,852 - DBCParser - INFO - Loading DBC file: CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-03-22 03:15:01,855 - DBCParser - INFO - Loading message: EEC1, ID: 0xCF004FE
+2025-03-22 03:15:01,855 - DBCParser - INFO - Loading message: CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:15:01,856 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-03-22 03:15:06,749 - CANInterface - INFO - Added interface sender on PCAN_USBBUS1 with role sender
+2025-03-22 03:15:06,749 - CANInterface - INFO - Added interface receiver on PCAN_USBBUS2 with role receiver
+2025-03-22 03:15:06,763 - can.pcan - WARNING - uptime library not available, timestamps are relative to boot time and not to Epoch UTC
+2025-03-22 03:15:06,833 - CANInterface - INFO - Interface sender initialized on PCAN_USBBUS1
+2025-03-22 03:15:06,900 - CANInterface - INFO - Interface receiver initialized on PCAN_USBBUS2
+2025-03-22 03:15:06,901 - CANInterface - INFO - Started receive thread for receiver
+2025-03-22 03:15:08,492 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 03:15:08,493 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 03:15:08,494 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 03:15:08,494 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 03:15:08,495 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 03:15:08,496 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 03:15:08,496 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:15:08,497 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:15:08,497 - MessageProcessor - INFO - Sent message 0xCF004FE on sender
+2025-03-22 03:15:08,498 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using standard interface: True
+2025-03-22 03:15:08,599 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:15:08,599 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 03:15:08,600 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 03:15:08,600 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 03:15:08,600 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 03:15:08,600 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:15:08,601 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:15:08,601 - MessageProcessor - INFO - Sent message 0x18FEF1FE on sender
+2025-03-22 03:15:08,601 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using standard interface: True
+2025-03-22 03:15:09,100 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 03:15:09,100 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 03:15:09,101 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 03:15:09,101 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 03:15:09,102 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 03:15:09,102 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 03:15:09,102 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:15:09,103 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:15:09,103 - MessageProcessor - INFO - Sent message 0xCF004FE on sender
+2025-03-22 03:15:09,103 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using standard interface: True
+2025-03-22 03:15:09,204 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:15:09,205 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 03:15:09,205 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 03:15:09,206 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 03:15:09,206 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 03:15:09,207 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:15:09,207 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:15:09,207 - MessageProcessor - INFO - Sent message 0x18FEF1FE on sender
+2025-03-22 03:15:09,207 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using standard interface: True
+2025-03-22 03:15:11,425 - CANInterface - INFO - All CAN interfaces stopped
+2025-03-22 03:18:02,656 - CANVisApp - INFO - Starting CAN visualization application
+2025-03-22 03:18:03,388 - DBCParser - INFO - Loading DBC file: CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-03-22 03:18:03,391 - DBCParser - INFO - Loading message: EEC1, ID: 0xCF004FE
+2025-03-22 03:18:03,391 - DBCParser - INFO - Loading message: CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:18:03,391 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-03-22 03:18:11,910 - CANVisApp - INFO - Starting CAN visualization application
+2025-03-22 03:18:12,827 - DBCParser - INFO - Loading DBC file: CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-03-22 03:18:12,832 - DBCParser - INFO - Loading message: EEC1, ID: 0xCF004FE
+2025-03-22 03:18:12,833 - DBCParser - INFO - Loading message: CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:18:12,834 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-03-22 03:18:17,105 - CANInterface - INFO - Added interface sender on PCAN_USBBUS1 with role sender
+2025-03-22 03:18:17,105 - CANInterface - INFO - Added interface receiver on PCAN_USBBUS2 with role receiver
+2025-03-22 03:18:17,115 - can.pcan - WARNING - uptime library not available, timestamps are relative to boot time and not to Epoch UTC
+2025-03-22 03:18:17,197 - CANInterface - INFO - Interface sender initialized on PCAN_USBBUS1
+2025-03-22 03:18:17,264 - CANInterface - INFO - Interface receiver initialized on PCAN_USBBUS2
+2025-03-22 03:18:17,265 - CANInterface - INFO - Started receive thread for receiver
+2025-03-22 03:18:18,704 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 03:18:18,704 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 03:18:18,704 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 03:18:18,704 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 03:18:18,706 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 03:18:18,706 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 03:18:18,706 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:18:18,706 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:18:18,706 - MessageProcessor - INFO - Sent message 0xCF004FE on sender
+2025-03-22 03:18:18,707 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using standard interface: True
+2025-03-22 03:18:18,807 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:18:18,808 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 03:18:18,809 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 03:18:18,809 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 03:18:18,810 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 03:18:18,810 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:18:18,811 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:18:18,811 - MessageProcessor - INFO - Sent message 0x18FEF1FE on sender
+2025-03-22 03:18:18,811 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using standard interface: True
+2025-03-22 03:18:19,494 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 03:18:19,494 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 03:18:19,495 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 03:18:19,495 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 03:18:19,495 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 03:18:19,495 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 03:18:19,495 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:18:19,495 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:18:19,497 - MessageProcessor - INFO - Sent message 0xCF004FE on sender
+2025-03-22 03:18:19,497 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using standard interface: True
+2025-03-22 03:18:19,598 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:18:19,599 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 03:18:19,601 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 03:18:19,601 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 03:18:19,601 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 03:18:19,602 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:18:19,602 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:18:19,602 - MessageProcessor - INFO - Sent message 0x18FEF1FE on sender
+2025-03-22 03:18:19,603 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using standard interface: True
+2025-03-22 03:18:20,816 - CANInterface - INFO - All CAN interfaces stopped
+2025-03-22 03:21:16,045 - CANVisApp - INFO - Starting CAN visualization application
+2025-03-22 03:21:16,823 - DBCParser - INFO - Loading DBC file: CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-03-22 03:21:16,825 - DBCParser - INFO - Loading message: EEC1, ID: 0xCF004FE
+2025-03-22 03:21:16,825 - DBCParser - INFO - Loading message: CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:21:16,826 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-03-22 03:22:31,430 - CANVisApp - INFO - Starting CAN visualization application
+2025-03-22 03:22:32,250 - DBCParser - INFO - Loading DBC file: CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-03-22 03:22:32,253 - DBCParser - INFO - Loading message: EEC1, ID: 0xCF004FE
+2025-03-22 03:22:32,254 - DBCParser - INFO - Loading message: CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:22:32,254 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-03-22 03:22:39,530 - CANVisApp - INFO - Initializing DirectPCAN interface
+2025-03-22 03:22:39,531 - CANVisApp - INFO - Added callback for DirectPCAN message processing
+2025-03-22 03:22:39,532 - DirectPCANInterface - INFO - Initializing PCAN hardware interfaces
+2025-03-22 03:22:39,544 - can.pcan - WARNING - uptime library not available, timestamps are relative to boot time and not to Epoch UTC
+2025-03-22 03:22:39,624 - DirectPCANInterface - INFO - Sender bus initialized on PCAN_USBBUS1
+2025-03-22 03:22:39,657 - DirectPCANInterface - ERROR - PCAN hardware error: The value of a handle (PCAN-Channel, PCAN-Hardware, PCAN-Net, PCAN-Client) is invalid
+2025-03-22 03:22:39,769 - DirectPCANInterface - INFO - Sender bus shutdown
+2025-03-22 03:22:39,770 - CANVisApp - ERROR - Failed to start DirectPCAN interface: Failed to initialize PCAN hardware: The value of a handle (PCAN-Channel, PCAN-Hardware, PCAN-Net, PCAN-Client) is invalid
+2025-03-22 03:22:51,183 - DirectPCANInterface - INFO - Stopping PCAN interface
+2025-03-22 03:22:51,183 - CANVisApp - INFO - Initializing DirectPCAN interface
+2025-03-22 03:22:51,184 - CANVisApp - INFO - Added callback for DirectPCAN message processing
+2025-03-22 03:22:51,184 - DirectPCANInterface - INFO - Initializing PCAN hardware interfaces
+2025-03-22 03:22:51,254 - DirectPCANInterface - INFO - Sender bus initialized on PCAN_USBBUS1
+2025-03-22 03:22:51,286 - DirectPCANInterface - ERROR - PCAN hardware error: The value of a handle (PCAN-Channel, PCAN-Hardware, PCAN-Net, PCAN-Client) is invalid
+2025-03-22 03:22:51,392 - DirectPCANInterface - INFO - Sender bus shutdown
+2025-03-22 03:22:51,393 - CANVisApp - ERROR - Failed to start DirectPCAN interface: Failed to initialize PCAN hardware: The value of a handle (PCAN-Channel, PCAN-Hardware, PCAN-Net, PCAN-Client) is invalid
+2025-03-22 03:23:02,606 - CANVisApp - INFO - Starting CAN visualization application
+2025-03-22 03:23:03,406 - DBCParser - INFO - Loading DBC file: CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-03-22 03:23:03,409 - DBCParser - INFO - Loading message: EEC1, ID: 0xCF004FE
+2025-03-22 03:23:03,409 - DBCParser - INFO - Loading message: CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:23:03,409 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-03-22 03:23:14,496 - CANInterface - INFO - Added interface sender on PCAN_USBBUS1 with role sender
+2025-03-22 03:23:14,496 - CANInterface - INFO - Added interface receiver on PCAN_USBBUS2 with role receiver
+2025-03-22 03:23:14,509 - can.pcan - WARNING - uptime library not available, timestamps are relative to boot time and not to Epoch UTC
+2025-03-22 03:23:14,581 - CANInterface - INFO - Interface sender initialized on PCAN_USBBUS1
+2025-03-22 03:23:14,647 - CANInterface - INFO - Interface receiver initialized on PCAN_USBBUS2
+2025-03-22 03:23:14,648 - CANInterface - INFO - Started receive thread for receiver
+2025-03-22 03:23:15,915 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 03:23:15,915 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 03:23:15,916 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 03:23:15,916 - CANVisApp - INFO - Sending via standard interface: EEC1
+2025-03-22 03:23:15,916 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 03:23:15,916 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 03:23:15,918 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 03:23:15,918 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:23:15,918 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:23:15,919 - MessageProcessor - INFO - Sent message 0xCF004FE on sender
+2025-03-22 03:23:15,919 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using standard interface: True
+2025-03-22 03:23:16,020 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:23:16,021 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 03:23:16,021 - CANVisApp - INFO - Sending via standard interface: CCVS1
+2025-03-22 03:23:16,021 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 03:23:16,022 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 03:23:16,022 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 03:23:16,022 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:23:16,023 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:23:16,024 - MessageProcessor - INFO - Sent message 0x18FEF1FE on sender
+2025-03-22 03:23:16,024 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using standard interface: True
+2025-03-22 03:23:16,381 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 03:23:16,382 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 03:23:16,382 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 03:23:16,382 - CANVisApp - INFO - Sending via standard interface: EEC1
+2025-03-22 03:23:16,383 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 03:23:16,383 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 03:23:16,383 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 03:23:16,383 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:23:16,383 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:23:16,385 - MessageProcessor - INFO - Sent message 0xCF004FE on sender
+2025-03-22 03:23:16,385 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using standard interface: True
+2025-03-22 03:23:16,486 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:23:16,487 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 03:23:16,487 - CANVisApp - INFO - Sending via standard interface: CCVS1
+2025-03-22 03:23:16,488 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 03:23:16,489 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 03:23:16,490 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 03:23:16,490 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:23:16,491 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:23:16,491 - MessageProcessor - INFO - Sent message 0x18FEF1FE on sender
+2025-03-22 03:23:16,492 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using standard interface: True
+2025-03-22 03:23:16,961 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 03:23:16,962 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 03:23:16,962 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 03:23:16,963 - CANVisApp - INFO - Sending via standard interface: EEC1
+2025-03-22 03:23:16,963 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 03:23:16,963 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 03:23:16,965 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 03:23:16,965 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:23:16,965 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:23:16,966 - MessageProcessor - INFO - Sent message 0xCF004FE on sender
+2025-03-22 03:23:16,966 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using standard interface: True
+2025-03-22 03:23:17,067 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:23:17,067 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 03:23:17,068 - CANVisApp - INFO - Sending via standard interface: CCVS1
+2025-03-22 03:23:17,069 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 03:23:17,069 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 03:23:17,070 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 03:23:17,071 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:23:17,071 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:23:17,071 - MessageProcessor - INFO - Sent message 0x18FEF1FE on sender
+2025-03-22 03:23:17,071 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using standard interface: True
+2025-03-22 03:23:18,287 - CANInterface - INFO - All CAN interfaces stopped
+2025-03-22 03:26:06,779 - CANVisApp - INFO - Starting CAN visualization application
+2025-03-22 03:26:07,677 - DBCParser - INFO - Loading DBC file: CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-03-22 03:26:07,679 - DBCParser - INFO - Loading message: EEC1, ID: 0xCF004FE
+2025-03-22 03:26:07,680 - DBCParser - INFO - Loading message: CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:26:07,681 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-03-22 03:26:18,110 - CANVisApp - INFO - Starting CAN with simulation=False, direct_pcan=False
+2025-03-22 03:26:18,111 - CANInterface - INFO - Added interface sender on PCAN_USBBUS1 with role sender
+2025-03-22 03:26:18,111 - CANInterface - INFO - Added interface receiver on PCAN_USBBUS2 with role receiver
+2025-03-22 03:26:18,125 - can.pcan - WARNING - uptime library not available, timestamps are relative to boot time and not to Epoch UTC
+2025-03-22 03:26:18,197 - CANInterface - INFO - Interface sender initialized on PCAN_USBBUS1
+2025-03-22 03:26:18,230 - CANInterface - ERROR - Error initializing interface receiver: The value of a handle (PCAN-Channel, PCAN-Hardware, PCAN-Net, PCAN-Client) is invalid
+2025-03-22 03:26:19,606 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 03:26:19,607 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 03:26:19,607 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 03:26:19,607 - CANVisApp - INFO - Sending via standard interface: EEC1
+2025-03-22 03:26:19,608 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 03:26:19,608 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 03:26:19,608 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 03:26:19,608 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:26:19,608 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:26:19,609 - MessageProcessor - INFO - Sent message 0xCF004FE on sender
+2025-03-22 03:26:19,609 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using standard interface: True
+2025-03-22 03:26:19,711 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:26:19,711 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 03:26:19,712 - CANVisApp - INFO - Sending via standard interface: CCVS1
+2025-03-22 03:26:19,713 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 03:26:19,713 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 03:26:19,714 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 03:26:19,714 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:26:19,715 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:26:19,715 - MessageProcessor - INFO - Sent message 0x18FEF1FE on sender
+2025-03-22 03:26:19,715 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using standard interface: True
+2025-03-22 03:26:20,388 - CANVisApp - INFO - Sending test messages for IDs: ['0xCF004FE', '0x18FEF1FE']
+2025-03-22 03:26:20,388 - CANVisApp - INFO - Creating test message for EEC1, ID: 0xCF004FE
+2025-03-22 03:26:20,388 - CANVisApp - INFO -   Signal: EngineSpeed, Value: 4015.9375
+2025-03-22 03:26:20,388 - CANVisApp - INFO - Sending via standard interface: EEC1
+2025-03-22 03:26:20,389 - MessageProcessor - INFO - Attempting to encode message ID 0xCF004FE with signals: {'EngineSpeed': 4015.9375}
+2025-03-22 03:26:20,389 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-03-22 03:26:20,389 - MessageProcessor - INFO - Successfully encoded message: 00 00 00 80 7D 00 00 00
+2025-03-22 03:26:20,389 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:26:20,389 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:26:20,390 - MessageProcessor - INFO - Sent message 0xCF004FE on sender
+2025-03-22 03:26:20,390 - CANVisApp - INFO - Sent test message EEC1 (0xCF004FE) using standard interface: True
+2025-03-22 03:26:20,491 - CANVisApp - INFO - Creating test message for CCVS1, ID: 0x18FEF1FE
+2025-03-22 03:26:20,491 - CANVisApp - INFO -   Signal: WheelBasedVehicleSpeed, Value: 125.498
+2025-03-22 03:26:20,491 - CANVisApp - INFO - Sending via standard interface: CCVS1
+2025-03-22 03:26:20,493 - MessageProcessor - INFO - Attempting to encode message ID 0x18FEF1FE with signals: {'WheelBasedVehicleSpeed': 125.498}
+2025-03-22 03:26:20,493 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-03-22 03:26:20,494 - MessageProcessor - INFO - Successfully encoded message: 00 7F 7D 00 00 00 00 00
+2025-03-22 03:26:20,494 - MessageProcessor - INFO - Attempting direct send through python-can
+2025-03-22 03:26:20,494 - MessageProcessor - INFO - Direct send successful
+2025-03-22 03:26:20,495 - MessageProcessor - INFO - Sent message 0x18FEF1FE on sender
+2025-03-22 03:26:20,495 - CANVisApp - INFO - Sent test message CCVS1 (0x18FEF1FE) using standard interface: True
+2025-03-22 03:26:21,503 - CANInterface - INFO - All CAN interfaces stopped
+2025-03-22 03:26:22,416 - CANVisApp - INFO - Settings would be saved here

@@ -26,9 +26,10 @@ class DBCParser:
             for message in self.db.messages:
                 # Store both standard and extended format of ID for maximum compatibility
                 # This helps with inconsistent ID handling in some CAN interfaces
+                self.logger.info(f"Loading message: {message.name}, ID: 0x{message.frame_id:X}")
                 self.message_by_id[message.frame_id] = message
                 
-                # Also store signals by message for easy access
+                # Aleo store signals by message for easy access
                 for signal in message.signals:
                     self.signals_by_message[message.frame_id].append(signal)
             
@@ -84,6 +85,7 @@ class DBCParser:
         message = self.get_message_by_id(frame_id)
         if message:
             try:
+                self.logger.info(f"Encoding message ID 0x{frame_id:X}, DB ID 0x{message.frame_id:X}")
                 return self.db.encode_message(frame_id, data_dict)
             except Exception as e:
                 self.logger.error(f"Error encoding message ID 0x{frame_id:X}: {e}")
