@@ -14,6 +14,8 @@ from message_processor import MessageProcessor
 from can_simulator import DualCANSimulator
 from signal_display import SignalTableWidget, SignalPlotWidget
 import time
+from signal_selection_dialog import SignalSelectionDialog
+
 
 
 class CANVisApp(QMainWindow):
@@ -38,7 +40,10 @@ class CANVisApp(QMainWindow):
         # Load settings if the method exists
         if hasattr(self, 'load_settings'):
             self.load_settings()
-    
+
+        self.max_monitored_signals = 10  # Configurable limit
+        self.monitored_signals = []  # List of signals to monitor
+
         # Show the window
         self.show()
     
@@ -119,6 +124,11 @@ class CANVisApp(QMainWindow):
         self.send_test_button = QPushButton("Send Test Messages")
         self.send_test_button.clicked.connect(self.send_test_messages)
         control_layout.addWidget(self.send_test_button)
+
+        # Add a "Select Signals" button to the control bar in init_ui method
+        self.select_signals_button = QPushButton("Select Signals")
+        self.select_signals_button.clicked.connect(self.show_signal_selection_dialog)
+        control_layout.addWidget(self.select_signals_button)
         
         main_layout.addLayout(control_layout)
         
@@ -392,27 +402,31 @@ class CANVisApp(QMainWindow):
     def _update_ui_with_message(self, frame_id, message_name, signals, interface):
         """Update UI with message data"""
         self.logger.info(f"Updating UI with message: {message_name}, signals: {signals}")
-    
+
         # Update signal table and plot for each signal
         for signal_name, value in signals.items():
+            # Check if we should process this signal
+            if not self.should_process_signal(frame_id, signal_name):
+                continue
+            
             # Get unit if available
             message = self.dbc_parser.get_message_by_id(frame_id)
             if not message:
                 self.logger.warning(f"No message definition found for ID 0x{frame_id:X}")
                 continue
-                
+            
             unit = ""
             for signal in message.signals:
                 if signal.name == signal_name:
                     unit = signal.unit or ""
                     break
-        
+    
             # Update table
             self.logger.info(f"Updating table for signal: {signal_name}={value} {unit}")
             self.table_widget.update_signal(
                 frame_id, message_name, signal_name, value, unit, interface
             )
-        
+    
             # Update plot
             self.plot_widget.add_data_point(
                 frame_id, message_name, signal_name, value, unit, interface
@@ -502,6 +516,93 @@ class CANVisApp(QMainWindow):
         
         # Update UI based on current mode
         self.update_interface_controls()
+
+    def show_signal_selection_dialog(self):
+        """Show dialog for selecting signals to monitor"""
+        if not self.dbc_parser.db:
+            QMessageBox.warning(self, "Warning", "Please load a DBC file first")
+            return
+    
+        dialog = SignalSelectionDialog(self.dbc_parser, self, self.max_monitored_signals)
+        dialog.selection_complete.connect(self.set_monitored_signals)
+    
+        # If we already have selected signals, preload them
+        if self.monitored_signals:
+            dialog.selected_signals = self.monitored_signals.copy()
+            dialog.update_selected_display()
+        
+            # Check the corresponding items in the tree
+            for signal_data in self.monitored_signals:
+                dialog.check_signal_in_tree(signal_data)
+    
+        # Show the dialog
+        dialog.exec_()
+
+    def set_monitored_signals(self, signal_list):
+        """Set the list of signals to monitor"""
+        self.monitored_signals = signal_list
+        self.logger.info(f"Set {len(signal_list)} signals to monitor")
+    
+        # Update the status bar
+        self.status_bar.showMessage(f"Monitoring {len(signal_list)} signals")
+    
+        # Update the message tree to highlight monitored signals
+        self.highlight_monitored_signals()
+
+    def highlight_monitored_signals(self):
+        """Highlight monitored signals in the message tree"""
+        # Clear any previous highlighting
+        for i in range(self.message_tree.topLevelItemCount()):
+            msg_item = self.message_tree.topLevelItem(i)
+            # Reset font
+            font = msg_item.font(0)
+            font.setBold(False)
+            msg_item.setFont(0, font)
+        
+            for j in range(msg_item.childCount()):
+                signal_item = msg_item.child(j)
+                font = signal_item.font(0)
+                font.setBold(False)
+                signal_item.setFont(0, font)
+    
+        # Highlight selected signals
+        for signal_data in self.monitored_signals:
+            # Find the message item
+            for i in range(self.message_tree.topLevelItemCount()):
+                msg_item = self.message_tree.topLevelItem(i)
+                message = self.dbc_parser.get_message_by_id(signal_data['message_id'])
+            
+                if message and msg_item.text(0) == message.name:
+                    # Highlight the message
+                    font = msg_item.font(0)
+                    font.setBold(True)
+                    msg_item.setFont(0, font)
+                
+                    # Find and highlight the signal
+                    for j in range(msg_item.childCount()):
+                        signal_item = msg_item.child(j)
+                        if signal_item.text(0) == signal_data['signal_name']:
+                            font = signal_item.font(0)
+                            font.setBold(True)
+                            signal_item.setFont(0, font)
+                            break
+
+    # Add this method to filter incoming messages
+    def should_process_signal(self, msg_id, signal_name):
+        """Check if a signal should be processed based on selection"""
+        # If no signals are selected, process all (default behavior)
+        if not self.monitored_signals:
+            return True
+    
+        # Check if this signal is in the monitored list
+        for signal_data in self.monitored_signals:
+            if (signal_data['message_id'] == msg_id and 
+                signal_data['signal_name'] == signal_name):
+                return True
+    
+        return False
+
+    
 
 def main():
     """Main application entry point"""
