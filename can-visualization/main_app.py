@@ -14,8 +14,9 @@ from message_processor import MessageProcessor
 from can_simulator import DualCANSimulator
 from signal_display import SignalTableWidget, SignalPlotWidget
 import time
-from signal_selection_dialog import SignalSelectionDialog
 
+# Import the new dashboard view
+from dashboard_view import DashboardView
 
 
 class CANVisApp(QMainWindow):
@@ -40,10 +41,7 @@ class CANVisApp(QMainWindow):
         # Load settings if the method exists
         if hasattr(self, 'load_settings'):
             self.load_settings()
-
-        self.max_monitored_signals = 10  # Configurable limit
-        self.monitored_signals = []  # List of signals to monitor
-
+    
         # Show the window
         self.show()
     
@@ -65,6 +63,9 @@ class CANVisApp(QMainWindow):
         parser.add_argument('--simulation', action='store_true', help='Run in simulation mode')
         parser.add_argument('--direct-pcan', action='store_true', 
                           help='Use direct PCAN interface (like decode_pcan.py)')
+        # Add new dashboard mode argument
+        parser.add_argument('--dashboard', action='store_true',
+                          help='Enable modern dashboard interface')
         return parser.parse_args()
     
     def init_ui(self):
@@ -124,14 +125,25 @@ class CANVisApp(QMainWindow):
         self.send_test_button = QPushButton("Send Test Messages")
         self.send_test_button.clicked.connect(self.send_test_messages)
         control_layout.addWidget(self.send_test_button)
-
-        # Add a "Select Signals" button to the control bar in init_ui method
-        self.select_signals_button = QPushButton("Select Signals")
-        self.select_signals_button.clicked.connect(self.show_signal_selection_dialog)
-        control_layout.addWidget(self.select_signals_button)
         
         main_layout.addLayout(control_layout)
         
+        # Use dashboard view or traditional view based on args
+        if self.args.dashboard:
+            self._init_dashboard_ui(main_layout)
+        else:
+            self._init_traditional_ui(main_layout)
+        
+        # Status bar
+        self.status_bar = self.statusBar()
+        self.status_bar.showMessage("Ready")
+        
+        # Update UI based on direct PCAN checkbox
+        self.direct_pcan_checkbox.stateChanged.connect(self.on_interface_mode_changed)
+        self.update_interface_controls()
+    
+    def _init_traditional_ui(self, main_layout):
+        """Initialize the traditional splitview UI"""
         # Create main splitter
         self.splitter = QSplitter(Qt.Horizontal)
         
@@ -155,14 +167,12 @@ class CANVisApp(QMainWindow):
         self.splitter.setSizes([300, 700])
         
         main_layout.addWidget(self.splitter)
-        
-        # Status bar
-        self.status_bar = self.statusBar()
-        self.status_bar.showMessage("Ready")
-        
-        # Update UI based on direct PCAN checkbox
-        self.direct_pcan_checkbox.stateChanged.connect(self.on_interface_mode_changed)
-        self.update_interface_controls()
+    
+    def _init_dashboard_ui(self, main_layout):
+        """Initialize the modern dashboard UI"""
+        # Create the dashboard view
+        self.dashboard_view = DashboardView()
+        main_layout.addWidget(self.dashboard_view)
     
     def update_interface_controls(self):
         """Show/hide interface controls based on direct PCAN checkbox"""
@@ -210,6 +220,10 @@ class CANVisApp(QMainWindow):
         self.message_processor.message_decoded.connect(self.on_message_decoded)
         self.message_processor.unknown_message.connect(self.on_unknown_message)
     
+        # Initialize dashboard view if in dashboard mode
+        if self.args.dashboard and hasattr(self, 'dashboard_view'):
+            self.dashboard_view.init_web_channel(self.message_processor, self.dbc_parser)
+            
         # If direct PCAN is specified in args, set it up now
         if self.args.direct_pcan:
             self.direct_pcan_checkbox.setChecked(True)
@@ -238,13 +252,20 @@ class CANVisApp(QMainWindow):
         if success:
             self.dbc_path = file_path
             self.status_bar.showMessage(f"DBC file loaded: {file_path}")
-            self.update_message_tree()
+            
+            # Update message tree for traditional view
+            if not self.args.dashboard:
+                self.update_message_tree()
         else:
             self.status_bar.showMessage("Failed to load DBC file")
             QMessageBox.critical(self, "Error", f"Failed to load DBC file: {file_path}")
     
     def update_message_tree(self):
         """Update the message tree with information from the loaded DBC"""
+        # Only necessary for traditional view
+        if self.args.dashboard:
+            return
+            
         # Clear existing items
         self.message_tree.clear()
         
@@ -402,31 +423,31 @@ class CANVisApp(QMainWindow):
     def _update_ui_with_message(self, frame_id, message_name, signals, interface):
         """Update UI with message data"""
         self.logger.info(f"Updating UI with message: {message_name}, signals: {signals}")
-
+    
+        # In dashboard mode, no need to update traditional UI
+        if self.args.dashboard:
+            return
+    
         # Update signal table and plot for each signal
         for signal_name, value in signals.items():
-            # Check if we should process this signal
-            if not self.should_process_signal(frame_id, signal_name):
-                continue
-            
             # Get unit if available
             message = self.dbc_parser.get_message_by_id(frame_id)
             if not message:
                 self.logger.warning(f"No message definition found for ID 0x{frame_id:X}")
                 continue
-            
+                
             unit = ""
             for signal in message.signals:
                 if signal.name == signal_name:
                     unit = signal.unit or ""
                     break
-    
+        
             # Update table
             self.logger.info(f"Updating table for signal: {signal_name}={value} {unit}")
             self.table_widget.update_signal(
                 frame_id, message_name, signal_name, value, unit, interface
             )
-    
+        
             # Update plot
             self.plot_widget.add_data_point(
                 frame_id, message_name, signal_name, value, unit, interface
@@ -517,96 +538,52 @@ class CANVisApp(QMainWindow):
         # Update UI based on current mode
         self.update_interface_controls()
 
-    def show_signal_selection_dialog(self):
-        """Show dialog for selecting signals to monitor"""
-        if not self.dbc_parser.db:
-            QMessageBox.warning(self, "Warning", "Please load a DBC file first")
-            return
-    
-        dialog = SignalSelectionDialog(self.dbc_parser, self, self.max_monitored_signals)
-        dialog.selection_complete.connect(self.set_monitored_signals)
-    
-        # If we already have selected signals, preload them
-        if self.monitored_signals:
-            dialog.selected_signals = self.monitored_signals.copy()
-            dialog.update_selected_display()
-        
-            # Check the corresponding items in the tree
-            for signal_data in self.monitored_signals:
-                dialog.check_signal_in_tree(signal_data)
-    
-        # Show the dialog
-        dialog.exec_()
-
-    def set_monitored_signals(self, signal_list):
-        """Set the list of signals to monitor"""
-        self.monitored_signals = signal_list
-        self.logger.info(f"Set {len(signal_list)} signals to monitor")
-    
-        # Update the status bar
-        self.status_bar.showMessage(f"Monitoring {len(signal_list)} signals")
-    
-        # Update the message tree to highlight monitored signals
-        self.highlight_monitored_signals()
-
-    def highlight_monitored_signals(self):
-        """Highlight monitored signals in the message tree"""
-        # Clear any previous highlighting
-        for i in range(self.message_tree.topLevelItemCount()):
-            msg_item = self.message_tree.topLevelItem(i)
-            # Reset font
-            font = msg_item.font(0)
-            font.setBold(False)
-            msg_item.setFont(0, font)
-        
-            for j in range(msg_item.childCount()):
-                signal_item = msg_item.child(j)
-                font = signal_item.font(0)
-                font.setBold(False)
-                signal_item.setFont(0, font)
-    
-        # Highlight selected signals
-        for signal_data in self.monitored_signals:
-            # Find the message item
-            for i in range(self.message_tree.topLevelItemCount()):
-                msg_item = self.message_tree.topLevelItem(i)
-                message = self.dbc_parser.get_message_by_id(signal_data['message_id'])
-            
-                if message and msg_item.text(0) == message.name:
-                    # Highlight the message
-                    font = msg_item.font(0)
-                    font.setBold(True)
-                    msg_item.setFont(0, font)
-                
-                    # Find and highlight the signal
-                    for j in range(msg_item.childCount()):
-                        signal_item = msg_item.child(j)
-                        if signal_item.text(0) == signal_data['signal_name']:
-                            font = signal_item.font(0)
-                            font.setBold(True)
-                            signal_item.setFont(0, font)
-                            break
-
-    # Add this method to filter incoming messages
-    def should_process_signal(self, msg_id, signal_name):
-        """Check if a signal should be processed based on selection"""
-        # If no signals are selected, process all (default behavior)
-        if not self.monitored_signals:
-            return True
-    
-        # Check if this signal is in the monitored list
-        for signal_data in self.monitored_signals:
-            if (signal_data['message_id'] == msg_id and 
-                signal_data['signal_name'] == signal_name):
-                return True
-    
-        return False
-
-    
-
 def main():
     """Main application entry point"""
     app = QApplication(sys.argv)
+    
+    # Apply dark theme if in dashboard mode
+    args = sys.argv
+    if '--dashboard' in args:
+        from PyQt5.QtGui import QPalette, QColor
+        
+        # Apply dark palette
+        dark_palette = QPalette()
+        dark_palette.setColor(QPalette.Window, QColor(53, 53, 53))
+        dark_palette.setColor(QPalette.WindowText, QColor(255, 255, 255))
+        dark_palette.setColor(QPalette.Base, QColor(25, 25, 25))
+        dark_palette.setColor(QPalette.AlternateBase, QColor(53, 53, 53))
+        dark_palette.setColor(QPalette.ToolTipBase, QColor(255, 255, 255))
+        dark_palette.setColor(QPalette.ToolTipText, QColor(255, 255, 255))
+        dark_palette.setColor(QPalette.Text, QColor(255, 255, 255))
+        dark_palette.setColor(QPalette.Button, QColor(53, 53, 53))
+        dark_palette.setColor(QPalette.ButtonText, QColor(255, 255, 255))
+        dark_palette.setColor(QPalette.BrightText, QColor(255, 0, 0))
+        dark_palette.setColor(QPalette.Link, QColor(42, 130, 218))
+        dark_palette.setColor(QPalette.Highlight, QColor(42, 130, 218))
+        dark_palette.setColor(QPalette.HighlightedText, QColor(0, 0, 0))
+        app.setPalette(dark_palette)
+        
+        # Apply stylesheet for better appearance
+        app.setStyleSheet("""
+            QPushButton {
+                background-color: #4a90e2;
+                color: white;
+                border: none;
+                padding: 5px 10px;
+                border-radius: 3px;
+            }
+            QPushButton:hover {
+                background-color: #5a9ae2;
+            }
+            QPushButton:pressed {
+                background-color: #3a80d2;
+            }
+            QPushButton:disabled {
+                background-color: #555555;
+            }
+        """)
+    
     window = CANVisApp()
     sys.exit(app.exec_())
 
