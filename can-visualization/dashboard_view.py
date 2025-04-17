@@ -5,6 +5,7 @@ import os
 import json
 import logging
 import tempfile
+import time  # Added missing import
 
 class SignalBridge(QObject):
     """Bridge between Python and JavaScript for signal data"""
@@ -41,9 +42,6 @@ class DashboardView(QWidget):
         # Create web view for React dashboard
         self.web_view = QWebEngineView()
     
-        # Create dashboard directory if it doesn't exist
-        os.makedirs(os.path.join(os.path.dirname(__file__), "dashboard"), exist_ok=True)
-    
         # Load dashboard HTML file
         self.load_dashboard()
     
@@ -67,7 +65,12 @@ class DashboardView(QWidget):
     
     def load_dashboard(self):
         """Load the dashboard HTML file"""
-        dashboard_path = os.path.join(os.path.dirname(__file__), "dashboard", "index.html")
+        # Look for the dashboard in the dist directory first (built version)
+        dashboard_path = os.path.join(os.path.dirname(__file__), "dashboard", "dist", "index.html")
+        
+        # If not found in dist, try the public directory (development version)
+        if not os.path.exists(dashboard_path):
+            dashboard_path = os.path.join(os.path.dirname(__file__), "dashboard", "public", "index.html")
         
         if not os.path.exists(dashboard_path):
             # If dashboard file doesn't exist, create a temporary one with a message
@@ -89,8 +92,9 @@ class DashboardView(QWidget):
                 <body>
                     <div class="message">
                         <h3>Dashboard files not found</h3>
-                        <p>Please run the dashboard setup script to install the necessary files.</p>
-                        <p>See the README.md file for instructions.</p>
+                        <p>Please run the setup_dashboard.sh script to install the necessary files:</p>
+                        <pre>bash setup_dashboard.sh</pre>
+                        <p>Then restart the application with the --dashboard flag.</p>
                     </div>
                 </body>
                 </html>
@@ -113,6 +117,72 @@ class DashboardView(QWidget):
         # Connect message signals
         if self.message_processor:
             self.message_processor.message_decoded.connect(self.on_message_decoded)
+            
+        # Load available signals from DBC
+        self.load_available_signals()
+        
+    def load_available_signals(self):
+        """Load available signals from the DBC file"""
+        if not self.dbc_parser or not self.dbc_parser.db:
+            self.logger.warning("No DBC parser or DB available")
+            return
+            
+        try:
+            # Get all message IDs
+            message_ids = self.dbc_parser.get_all_message_ids()
+            
+            for msg_id in message_ids:
+                message = self.dbc_parser.get_message_by_id(msg_id)
+                if not message:
+                    continue
+                    
+                for signal in message.signals:
+                    signal_id = f"{message.name}.{signal.name}"
+                    self.dbc_signals[signal_id] = {
+                        'name': signal.name,
+                        'message': message.name,
+                        'message_id': msg_id,
+                        'min': signal.minimum if signal.minimum is not None else 0,
+                        'max': signal.maximum if signal.maximum is not None else 100,
+                        'unit': signal.unit if signal.unit else '',
+                        'description': signal.comment if signal.comment else ''
+                    }
+            
+            self.logger.info(f"Loaded {len(self.dbc_signals)} signals from DBC")
+            
+            # Send available signals to JavaScript
+            self.send_available_signals_to_js()
+            
+        except Exception as e:
+            self.logger.error(f"Error loading available signals: {e}")
+    
+    def send_available_signals_to_js(self):
+        """Send available signals to JavaScript"""
+        try:
+            # Convert to the format expected by JavaScript
+            js_signals = []
+            for signal_id, signal_info in self.dbc_signals.items():
+                js_signals.append({
+                    'id': signal_id,
+                    'name': f"{signal_info['message']} - {signal_info['name']}",
+                    'unit': signal_info['unit'],
+                    'min': signal_info['min'],
+                    'max': signal_info['max']
+                })
+                
+            # Send to JavaScript - this would need a function defined in JS to receive it
+            js_code = f"""
+            if (window.canBridge && window.canBridge.availableSignals) {{
+                window.canBridge.availableSignals({json.dumps(js_signals)});
+            }} else {{
+                console.log('Available signals loaded but bridge not ready');
+                window.availableSignalsData = {json.dumps(js_signals)};
+            }}
+            """
+            self.web_view.page().runJavaScript(js_code)
+            
+        except Exception as e:
+            self.logger.error(f"Error sending available signals to JS: {e}")
         
     def on_message_decoded(self, frame_id, message_name, signals, interface):
         """Handle decoded CAN message"""
@@ -170,12 +240,6 @@ class DashboardView(QWidget):
                 'interface': interface
             })
     
-    @pyqtSlot()
-    def get_available_signals(self):
-        """Get available signals from DBC file"""
-        # This will be called from JavaScript
-        return json.dumps(self.dbc_signals)
-    
     @pyqtSlot(str)
     def save_dashboard_config(self, config_json):
         """Save dashboard configuration"""
@@ -195,43 +259,3 @@ class DashboardView(QWidget):
             self.current_config = config
         except Exception as e:
             self.logger.error(f"Error saving dashboard config: {e}")
-    
-    @pyqtSlot(str)
-    def load_dashboard(self):
-        """Load the dashboard HTML file"""
-        dashboard_path = os.path.join(os.path.dirname(__file__), "dashboard", "dist", "index.html")
-    
-        if not os.path.exists(dashboard_path):
-            # If dashboard file doesn't exist, create a temporary one with a message
-            fd, temp_path = tempfile.mkstemp(suffix='.html')
-            with os.fdopen(fd, 'w') as f:
-                f.write("""
-                <!DOCTYPE html>
-                <html>
-                <head>
-                    <meta charset="UTF-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>CAN Dashboard</title>
-                    <style>
-                        body { font-family: Arial, sans-serif; padding: 20px; }
-                        .message { background-color: #f8d7da; border: 1px solid #f5c6cb; 
-                                  color: #721c24; padding: 20px; border-radius: 5px; }
-                    </style>
-                </head>
-                <body>
-                    <div class="message">
-                        <h3>Dashboard files not found</h3>
-                        <p>Please run the dashboard setup script to install the necessary files.</p>
-                        <p>See the README.md file for instructions.</p>
-                    </div>
-                </body>
-                </html>
-                """)
-            dashboard_path = temp_path
-        
-        # Load the dashboard file
-        self.logger.info(f"Loading dashboard from {dashboard_path}")
-        self.web_view.load(QUrl.fromLocalFile(dashboard_path))
-    
-        # Add the bridge object to the page
-        self.web_view.page().setWebChannel(self.web_channel)
