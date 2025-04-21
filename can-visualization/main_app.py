@@ -18,7 +18,8 @@ import time
 # Import the new dashboard view
 from dashboard_view import DashboardView
 from configurable_dashboard_view import ConfigurableDashboardView
-
+import sys
+print(f"Running python version: {sys.version}")
 
 
 class CANVisApp(QMainWindow): 

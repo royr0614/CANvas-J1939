@@ -146,10 +146,7 @@ class ConfigurableDashboardView(QWidget):
         
         # Control bar
         control_layout = QHBoxLayout()
-        # In ConfigurableDashboardView.init_ui
-        layout.setContentsMargins(0, 0, 0, 0)
-        # And for the control_layout
-        control_layout.setContentsMargins(5, 5, 5, 5)
+        
         self.add_widget_button = QPushButton("Add Widget")
         self.add_widget_button.clicked.connect(self.add_widget_dialog)
         control_layout.addWidget(self.add_widget_button)
@@ -171,9 +168,8 @@ class ConfigurableDashboardView(QWidget):
             layout.addWidget(QLabel("PyQtWebEngine is not available. Please install it with: pip install PyQtWebEngine"))
             self.logger.warning("PyQtWebEngine not available - dashboard functionality limited")
             return
-        else:
-            self.web_view = QWebEngineView()
-            layout.addWidget(self.web_view, 1)
+        
+        self.web_view = QWebEngineView()
         
         # Enable JavaScript
         self.web_view.settings().setAttribute(QWebEngineSettings.JavascriptEnabled, True)
@@ -732,7 +728,7 @@ class ConfigurableDashboardView(QWidget):
                 
                 # Update widget configuration if needed
                 config_json = json.dumps({"widgets": self.configured_widgets})
-                js_code = f"updateConfig('{config_json.replace("'", "\\'")}')\;"
+                js_code = f"updateConfig('{config_json.replace("'", "\\'")}');"
                 self.web_view.page().runJavaScript(js_code)
             
         except Exception as e:
