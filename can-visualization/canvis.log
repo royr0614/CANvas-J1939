@@ -20261,3 +20261,21 @@
 2025-04-16 22:35:16,883 - CANVisApp - INFO - Updating UI with message: CCVS1, signals: {'WheelBasedVehicleSpeed': 194.14453125}
 2025-04-16 22:35:16,951 - CANSimulator - INFO - Stopping CAN simulator
 2025-04-16 22:42:03,434 - CANVisApp - INFO - Settings would be saved here
+2025-04-21 01:56:03,621 - CANVisApp - INFO - Starting CAN visualization application
+2025-04-21 01:56:03,630 - DashboardView - INFO - Initializing dashboard view
+2025-04-21 01:56:03,631 - DashboardView - INFO - Loading dashboard HTML from: C:\Users\royr0\Documents\Capstone Project\CANvas-J1939\can-visualization\dashboard.html
+2025-04-21 02:09:04,638 - CANVisApp - INFO - Starting CAN visualization application
+2025-04-21 02:09:04,642 - DashboardView - INFO - Initializing dashboard view
+2025-04-21 02:09:04,643 - DashboardView - INFO - Loading dashboard HTML from: C:\Users\royr0\Documents\Capstone Project\CANvas-J1939\can-visualization\dashboard.html
+2025-04-21 02:09:04,796 - DBCParser - INFO - Loading DBC file: CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-04-21 02:09:04,798 - DBCParser - INFO - Loading message: EEC1, ID: 0xCF004FE
+2025-04-21 02:09:04,798 - DBCParser - INFO - Loading message: CCVS1, ID: 0x18FEF1FE
+2025-04-21 02:09:04,798 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-04-21 02:09:17,903 - CANVisApp - INFO - Starting CAN with simulation=False, direct_pcan=False
+2025-04-21 02:09:17,906 - CANInterface - INFO - Added interface sender on PCAN_USBBUS1 with role sender
+2025-04-21 02:09:17,906 - CANInterface - INFO - Added interface receiver on PCAN_USBBUS1 with role receiver
+2025-04-21 02:09:17,945 - can.pcan - WARNING - uptime library not available, timestamps are relative to boot time and not to Epoch UTC
+2025-04-21 02:09:17,946 - CANInterface - ERROR - Error initializing interface sender: PCANBasic library not found.
+2025-04-21 02:09:17,947 - CANInterface - ERROR - Error initializing interface receiver: PCANBasic library not found.
+2025-04-21 02:09:19,079 - CANInterface - INFO - All CAN interfaces stopped
+2025-04-21 02:09:20,428 - CANVisApp - INFO - Settings would be saved here

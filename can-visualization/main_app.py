@@ -23,25 +23,30 @@ class CANVisApp(QMainWindow):
     """Main application window for CAN data visualization"""
     def __init__(self):
         super().__init__()
-    
+
         # Setup logging
         self.setup_logging()
         self.logger = logging.getLogger("CANVisApp")
         self.logger.info("Starting CAN visualization application")
-    
+
         # Parse command line arguments
         self.args = self.parse_arguments()
-    
+
         # Initialize UI components
         self.init_ui()
-    
+
         # Initialize backend components
         self.init_components()
     
+        # Initialize dashboard if in dashboard mode
+        # MOVE THIS LINE FROM init_ui TO HERE
+        if self.args.dashboard and hasattr(self, 'dashboard_view'):
+            self.dashboard_view.init_web_channel(self.message_processor, self.dbc_parser)
+
         # Load settings if the method exists
         if hasattr(self, 'load_settings'):
             self.load_settings()
-    
+
         # Show the window
         self.show()
     
@@ -173,6 +178,7 @@ class CANVisApp(QMainWindow):
         # Create the dashboard view
         self.dashboard_view = DashboardView()
         main_layout.addWidget(self.dashboard_view)
+    
     
     def update_interface_controls(self):
         """Show/hide interface controls based on direct PCAN checkbox"""
