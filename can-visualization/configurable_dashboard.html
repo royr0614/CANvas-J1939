@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAN Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            background-color: #f0f2f5;
+        }
+        
+        #app {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .header {
+            background-color: #1e3a8a;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .content {
+            flex: 1;
+            padding: 20px;
+            overflow: auto;
+        }
+        
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .empty-dashboard {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+            color: #666;
+            border: 2px dashed #ccc;
+            border-radius: 8px;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .empty-dashboard h3 {
+            margin-bottom: 10px;
+        }
+        
+        .widget {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            padding: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .widget-title {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .widget-title .widget-close {
+            cursor: pointer;
+            color: #999;
+            font-size: 16px;
+        }
+        
+        .widget-title .widget-close:hover {
+            color: #f44336;
+        }
+        
+        .widget-value {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .widget-unit {
+            font-size: 14px;
+            color: #999;
+            margin-left: 5px;
+        }
+        
+        .chart-container {
+            height: 80px;
+            margin-top: 10px;
+            position: relative;
+        }
+        
+        .gauge-container {
+            height: 130px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .gauge {
+            width: 120px;
+            height: 120px;
+            position: relative;
+        }
+        
+        .gauge-background {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: #e0e0e0;
+            position: absolute;
+            clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
+            transform: rotate(0deg);
+        }
+        
+        .gauge-progress {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(to right, #4CAF50, #FFEB3B, #FF5722);
+            position: absolute;
+            clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
+            transform-origin: center left;
+        }
+        
+        .gauge-center {
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            background: white;
+            border-radius: 50%;
+            top: 10%;
+            left: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .gauge-value {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .gauge-label {
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .widget.small {
+            grid-column: span 1;
+        }
+        
+        .widget.medium {
+            grid-column: span 2;
+        }
+        
+        .widget.large {
+            grid-column: span 3;
+        }
+        
+        @media (max-width: 768px) {
+            .widget.medium, .widget.large {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <div class="header">
+            <h2>CAN Visualization Dashboard</h2>
+            <div id="status">Ready</div>
+        </div>
+        
+        <div class="content">
+            <div id="dashboard" class="dashboard">
+                <div id="empty-dashboard" class="empty-dashboard">
+                    <h3>No Widgets Added</h3>
+                    <p>Add widgets using the "Add Widget" button above</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Track widgets and data
+        const widgets = {};
+        const dataHistory = {};
+        
+        // Polling for updates
+        function pollForUpdates() {
+            fetch('dashboard-config.json')
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    }
+                    return null;
+                })
+                .then(config => {
+                    if (config && config.widgets) {
+                        // Update dashboard configuration
+                        updateDashboardConfig(config.widgets);
+                    }
+                })
+                .catch(error => {
+                    console.log('Error fetching dashboard config:', error);
+                });
+                
+            fetch('dashboard-data.json')
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    }
+                    return null;
+                })
+                .then(data => {
+                    if (data) {
+                        updateWidgets(data);
+                    }
+                })
+                .catch(error => {
+                    console.log('Error fetching data:', error);
+                });
+        }
+        
+        // Update dashboard configuration (add/remove widgets)
+        function updateDashboardConfig(widgetConfigs) {
+            // Hide empty dashboard message if we have widgets
+            if (widgetConfigs.length > 0) {
+                document.getElementById('empty-dashboard').style.display = 'none';
+            } else {
+                document.getElementById('empty-dashboard').style.display = 'flex';
+            }
+            
+            // First, remove any widgets that are no longer in the config
+            const currentWidgetIds = Object.keys(widgets);
+            const newWidgetIds = widgetConfigs.map(w => w.id);
+            
+            for (const widgetId of currentWidgetIds) {
+                if (!newWidgetIds.includes(widgetId)) {
+                    // Remove the widget
+                    const element = document.getElementById(`widget-${widgetId}`);
+                    if (element) {
+                        element.remove();
+                    }
+                    delete widgets[widgetId];
+                    delete dataHistory[widgetId];
+                }
+            }
+            
+            // Add or update widgets
+            for (const widgetConfig of widgetConfigs) {
+                if (!widgets[widgetConfig.id]) {
+                    // Add new widget
+                    addWidget(widgetConfig);
+                }
+            }
+        }
+        
+        // Add a new widget to the dashboard
+        function addWidget(config) {
+            const dashboard = document.getElementById('dashboard');
+            
+            // Create widget element
+            const widget = document.createElement('div');
+            widget.id = `widget-${config.id}`;
+            widget.className = `widget ${config.size.toLowerCase()}`;
+            
+            // Set up data history
+            dataHistory[config.id] = {
+                values: Array(60).fill(0),
+                chart: null
+            };
+            
+            // Create widget content based on type
+            if (config.type === 'Gauge') {
+                widget.innerHTML = `
+                    <div class="widget-title">
+                        <span>${config.signal} (${config.message})</span>
+                        <span class="widget-close" onclick="removeWidget('${config.id}')">&times;</span>
+                    </div>
+                    <div class="gauge-container">
+                        <div class="gauge">
+                            <div class="gauge-background"></div>
+                            <div class="gauge-progress" id="gauge-${config.id}" style="transform: rotate(-90deg);"></div>
+                            <div class="gauge-center">
+                                <div class="gauge-value" id="value-${config.id}">0</div>
+                                <div class="gauge-label">${config.unit || ''}</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else if (config.type === 'Line Chart') {
+                widget.innerHTML = `
+                    <div class="widget-title">
+                        <span>${config.signal} (${config.message})</span>
+                        <span class="widget-close" onclick="removeWidget('${config.id}')">&times;</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="chart-${config.id}"></canvas>
+                    </div>
+                `;
+            } else {
+                // Numeric display
+                widget.innerHTML = `
+                    <div class="widget-title">
+                        <span>${config.signal} (${config.message})</span>
+                        <span class="widget-close" onclick="removeWidget('${config.id}')">&times;</span>
+                    </div>
+                    <div class="widget-value" id="value-${config.id}">0</div>
+                    <div class="widget-unit">${config.unit || ''}</div>
+                `;
+            }
+            
+            dashboard.appendChild(widget);
+            
+            // Initialize chart if needed
+            if (config.type === 'Line Chart') {
+                const ctx = document.getElementById(`chart-${config.id}`).getContext('2d');
+                dataHistory[config.id].chart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: Array(20).fill(''),
+                        datasets: [{
+                            data: dataHistory[config.id].values.slice(-20),
+                            borderColor: '#4a90e2',
+                            backgroundColor: 'rgba(74, 144, 226, 0.1)',
+                            borderWidth: 2,
+                            fill: true,
+                            pointRadius: 0
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        scales: {
+                            x: {
+                                display: false
+                            },
+                            y: {
+                                display: true,
+                                beginAtZero: false
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                enabled: false
+                            }
+                        },
+                        elements: {
+                            line: {
+                                tension: 0.4
+                            }
+                        },
+                        animation: false
+                    }
+                });
+            }
+            
+            // Store widget config
+            widgets[config.id] = config;
+        }
+        
+        // Remove a widget (called from widget close button)
+        function removeWidget(widgetId) {
+            // Send message to parent window
+            window.parent.postMessage({ type: 'removeWidget', id: widgetId }, '*');
+            
+            // Remove widget from DOM
+            const element = document.getElementById(`widget-${widgetId}`);
+            if (element) {
+                element.remove();
+            }
+            
+            // Clean up data
+            delete widgets[widgetId];
+            delete dataHistory[widgetId];
+            
+            // Show empty dashboard if no widgets left
+            if (Object.keys(widgets).length === 0) {
+                document.getElementById('empty-dashboard').style.display = 'flex';
+            }
+        }
+        
+        // Update gauges and charts with new data
+        function updateWidgets(data) {
+            // Update each widget with matching data
+            for (const widgetId in widgets) {
+                const widget = widgets[widgetId];
+                const messageName = widget.message;
+                const signalName = widget.signal;
+                
+                // Find the value for this widget
+                if (data[messageName] && data[messageName][signalName] !== undefined) {
+                    const value = data[messageName][signalName];
+                    
+                    // Update data history
+                    dataHistory[widgetId].values.push(value);
+                    dataHistory[widgetId].values.shift();
+                    
+                    // Update widget based on type
+                    if (widget.type === 'Gauge') {
+                        updateGauge(widgetId, value);
+                    } else if (widget.type === 'Line Chart') {
+                        updateChart(widgetId, value);
+                    } else {
+                        // Numeric display
+                        updateNumeric(widgetId, value);
+                    }
+                }
+            }
+        }
+        
+        // Update gauge widget
+        function updateGauge(widgetId, value) {
+            // Update value text
+            const valueElement = document.getElementById(`value-${widgetId}`);
+            if (valueElement) {
+                valueElement.textContent = typeof value === 'number' ? 
+                    value.toFixed(value < 10 ? 1 : 0) : value;
+            }
+            
+            // Update gauge position
+            const gaugeElement = document.getElementById(`gauge-${widgetId}`);
+            if (gaugeElement) {
+                // Estimate min/max from recent values
+                const values = dataHistory[widgetId].values.filter(v => v !== 0);
+                const min = values.length > 0 ? Math.min(...values) : 0;
+                const max = values.length > 0 ? Math.max(...values) : 100;
+                const buffer = (max - min) * 0.1; // Add 10% buffer
+                
+                const percentage = (value - min) / (max - min + buffer);
+                const rotation = -90 + percentage * 180;
+                gaugeElement.style.transform = `rotate(${rotation}deg)`;
+                
+                // Update color based on value
+                let color;
+                if (percentage < 0.33) {
+                    color = '#4CAF50'; // Green
+                } else if (percentage < 0.66) {
+                    color = '#FFEB3B'; // Yellow
+                } else {
+                    color = '#FF5722'; // Red/Orange
+                }
+                gaugeElement.style.background = color;
+            }
+        }
+        
+        // Update chart widget
+        function updateChart(widgetId, value) {
+            const chart = dataHistory[widgetId].chart;
+            if (chart) {
+                chart.data.datasets[0].data = dataHistory[widgetId].values.slice(-20);
+                chart.update();
+            }
+        }
+        
+        // Update numeric display widget
+        function updateNumeric(widgetId, value) {
+            const valueElement = document.getElementById(`value-${widgetId}`);
+            if (valueElement) {
+                valueElement.textContent = typeof value === 'number' ? 
+                    value.toFixed(value < 10 ? 1 : 0) : value;
+            }
+        }
+        
+        // Initialize
+        window.addEventListener('load', function() {
+            // Set up message listener for communication with parent window
+            window.addEventListener('message', function(event) {
+                if (event.data.type === 'status') {
+                    document.getElementById('status').textContent = event.data.message;
+                }
+            });
+            
+            // Start polling for updates
+            setInterval(pollForUpdates, 200);
+        });
+    </script>
+</body>
+</html>

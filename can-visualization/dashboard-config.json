@@ -1,0 +1,1 @@
+{"widgets": [{"id": "widget_0_9540", "type": "Gauge", "size": "Medium", "message": "CCVS1", "signal": "WheelBasedVehicleSpeed", "unit": "km/h"}, {"id": "widget_1_5577", "type": "Gauge", "size": "Medium", "message": "EEC1", "signal": "EngineSpeed", "unit": "rpm"}]}

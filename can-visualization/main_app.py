@@ -17,9 +17,11 @@ import time
 
 # Import the new dashboard view
 from dashboard_view import DashboardView
+from configurable_dashboard_view import ConfigurableDashboardView
 
 
-class CANVisApp(QMainWindow):
+
+class CANVisApp(QMainWindow): 
     """Main application window for CAN data visualization"""
     def __init__(self):
         super().__init__()
@@ -175,8 +177,8 @@ class CANVisApp(QMainWindow):
     
     def _init_dashboard_ui(self, main_layout):
         """Initialize the modern dashboard UI"""
-        # Create the dashboard view
-        self.dashboard_view = DashboardView()
+        # Create the configurable dashboard view
+        self.dashboard_view = ConfigurableDashboardView()
         main_layout.addWidget(self.dashboard_view)
     
     
