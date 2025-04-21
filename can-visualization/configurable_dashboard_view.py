@@ -732,7 +732,7 @@ class ConfigurableDashboardView(QWidget):
                 
                 # Update widget configuration if needed
                 config_json = json.dumps({"widgets": self.configured_widgets})
-                js_code = f"updateConfig('{config_json.replace("'", "\\'")}');"
+                js_code = f"updateConfig('{config_json.replace("'", "\\'")}')\;"
                 self.web_view.page().runJavaScript(js_code)
             
         except Exception as e:
