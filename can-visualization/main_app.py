@@ -26,10 +26,14 @@ class CANVisApp(QMainWindow):
     def __init__(self):
         super().__init__()
 
+
+        
         # Setup logging
         self.setup_logging()
         self.logger = logging.getLogger("CANVisApp")
         self.logger.info("Starting CAN visualization application")
+
+
 
         # Parse command line arguments
         self.args = self.parse_arguments()
@@ -86,10 +90,12 @@ class CANVisApp(QMainWindow):
         self.setCentralWidget(self.central_widget)
         
         main_layout = QVBoxLayout(self.central_widget)
-        
+        main_layout.setContentsMargins(0, 0, 0, 0)
+        main_layout.setSpacing(0)
         # Create control bar
         control_layout = QHBoxLayout()
-        
+        control_layout.setContentsMargins(5, 5, 5, 5)
+        control_layout.setSpacing(5)
         # DBC file controls
         control_layout.addWidget(QLabel("DBC File:"))
         self.dbc_path_label = QLabel("No DBC file loaded")
@@ -179,7 +185,8 @@ class CANVisApp(QMainWindow):
         """Initialize the modern dashboard UI"""
         # Create the configurable dashboard view
         self.dashboard_view = ConfigurableDashboardView()
-        main_layout.addWidget(self.dashboard_view)
+        main_layout.addWidget(self.dashboard_view, 1)
+        # In ConfigurableDashboardView.init_ui
     
     
     def update_interface_controls(self):
