@@ -19911,3 +19911,353 @@
 2025-04-16 22:23:49,754 - CANVisApp - INFO - Updating UI with message: CCVS1, signals: {'WheelBasedVehicleSpeed': 67.46875}
 2025-04-16 22:23:49,835 - CANSimulator - INFO - Stopping CAN simulator
 2025-04-16 22:26:25,287 - CANVisApp - INFO - Settings would be saved here
+2025-04-16 22:35:01,153 - CANVisApp - INFO - Starting CAN visualization application
+2025-04-16 22:35:01,153 - DashboardView - INFO - Loading dashboard from C:\Users\royr0\Documents\Capstone Project\CANvas-J1939\can-visualization\dashboard\dist\index.html
+2025-04-16 22:35:01,299 - CANVisApp - INFO - Running in simulation mode
+2025-04-16 22:35:01,301 - DBCParser - INFO - Loading DBC file: CSS-Electronics-SAE-J1939-DEMO.dbc
+2025-04-16 22:35:01,303 - DBCParser - INFO - Loading message: EEC1, ID: 0xCF004FE
+2025-04-16 22:35:01,303 - DBCParser - INFO - Loading message: CCVS1, ID: 0x18FEF1FE
+2025-04-16 22:35:01,303 - DBCParser - INFO - Loaded 2 messages from DBC file
+2025-04-16 22:35:01,303 - DashboardView - INFO - Loaded 2 signals from DBC
+2025-04-16 22:35:15,643 - CANVisApp - INFO - Starting CAN with simulation=True, direct_pcan=False
+2025-04-16 22:35:15,643 - CANSimulator - INFO - Starting CAN simulator
+2025-04-16 22:35:15,643 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-04-16 22:35:15,643 - MessageProcessor - INFO - Processing message 0xCF004FE from sender, data=['0x0', '0x0', '0x0', '0x54', '0x94', '0x0', '0x0', '0x0']
+2025-04-16 22:35:15,643 - MessageProcessor - INFO - Successfully decoded message 0xCF004FE: EEC1 with values {'EngineSpeed': 4746.5}
+2025-04-16 22:35:15,643 - MessageProcessor - INFO - Emitted message_decoded signal for EEC1
+2025-04-16 22:35:15,648 - MessageProcessor - INFO - Processing message 0xCF004FE from receiver, data=['0x0', '0x0', '0x0', '0x54', '0x94', '0x0', '0x0', '0x0']
+2025-04-16 22:35:15,648 - MessageProcessor - INFO - Successfully decoded message 0xCF004FE: EEC1 with values {'EngineSpeed': 4746.5}
+2025-04-16 22:35:15,648 - MessageProcessor - INFO - Emitted message_decoded signal for EEC1
+2025-04-16 22:35:15,648 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-04-16 22:35:15,648 - MessageProcessor - INFO - Processing message 0x18FEF1FE from sender, data=['0x0', '0x81', '0xb5', '0x0', '0x0', '0x0', '0x0', '0x0']
+2025-04-16 22:35:15,648 - MessageProcessor - INFO - Successfully decoded message 0x18FEF1FE: CCVS1 with values {'WheelBasedVehicleSpeed': 181.50390625}
+2025-04-16 22:35:15,648 - MessageProcessor - INFO - Emitted message_decoded signal for CCVS1
+2025-04-16 22:35:15,650 - MessageProcessor - INFO - Processing message 0x18FEF1FE from receiver, data=['0x0', '0x81', '0xb5', '0x0', '0x0', '0x0', '0x0', '0x0']
+2025-04-16 22:35:15,650 - MessageProcessor - INFO - Successfully decoded message 0x18FEF1FE: CCVS1 with values {'WheelBasedVehicleSpeed': 181.50390625}
+2025-04-16 22:35:15,650 - MessageProcessor - INFO - Emitted message_decoded signal for CCVS1
+2025-04-16 22:35:15,650 - CANVisApp - INFO - Decoded message received: ID=0xCF004FE, Name=EEC1, Interface=sender
+2025-04-16 22:35:15,650 - CANVisApp - INFO - Signal values: {'EngineSpeed': 4746.5}
+2025-04-16 22:35:15,650 - CANVisApp - INFO - Updating UI with message: EEC1, signals: {'EngineSpeed': 4746.5}
+2025-04-16 22:35:15,650 - CANVisApp - INFO - Decoded message received: ID=0xCF004FE, Name=EEC1, Interface=receiver
+2025-04-16 22:35:15,650 - CANVisApp - INFO - Signal values: {'EngineSpeed': 4746.5}
+2025-04-16 22:35:15,650 - CANVisApp - INFO - Updating UI with message: EEC1, signals: {'EngineSpeed': 4746.5}
+2025-04-16 22:35:15,650 - CANVisApp - INFO - Decoded message received: ID=0x18FEF1FE, Name=CCVS1, Interface=sender
+2025-04-16 22:35:15,650 - CANVisApp - INFO - Signal values: {'WheelBasedVehicleSpeed': 181.50390625}
+2025-04-16 22:35:15,650 - CANVisApp - INFO - Updating UI with message: CCVS1, signals: {'WheelBasedVehicleSpeed': 181.50390625}
+2025-04-16 22:35:15,650 - CANVisApp - INFO - Decoded message received: ID=0x18FEF1FE, Name=CCVS1, Interface=receiver
+2025-04-16 22:35:15,650 - CANVisApp - INFO - Signal values: {'WheelBasedVehicleSpeed': 181.50390625}
+2025-04-16 22:35:15,650 - CANVisApp - INFO - Updating UI with message: CCVS1, signals: {'WheelBasedVehicleSpeed': 181.50390625}
+2025-04-16 22:35:15,747 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-04-16 22:35:15,747 - MessageProcessor - INFO - Processing message 0xCF004FE from sender, data=['0x0', '0x0', '0x0', '0x67', '0x96', '0x0', '0x0', '0x0']
+2025-04-16 22:35:15,747 - MessageProcessor - INFO - Successfully decoded message 0xCF004FE: EEC1 with values {'EngineSpeed': 4812.875}
+2025-04-16 22:35:15,747 - MessageProcessor - INFO - Emitted message_decoded signal for EEC1
+2025-04-16 22:35:15,747 - CANVisApp - INFO - Decoded message received: ID=0xCF004FE, Name=EEC1, Interface=sender
+2025-04-16 22:35:15,748 - CANVisApp - INFO - Signal values: {'EngineSpeed': 4812.875}
+2025-04-16 22:35:15,748 - CANVisApp - INFO - Updating UI with message: EEC1, signals: {'EngineSpeed': 4812.875}
+2025-04-16 22:35:15,750 - MessageProcessor - INFO - Processing message 0xCF004FE from receiver, data=['0x0', '0x0', '0x0', '0x67', '0x96', '0x0', '0x0', '0x0']
+2025-04-16 22:35:15,750 - MessageProcessor - INFO - Successfully decoded message 0xCF004FE: EEC1 with values {'EngineSpeed': 4812.875}
+2025-04-16 22:35:15,750 - MessageProcessor - INFO - Emitted message_decoded signal for EEC1
+2025-04-16 22:35:15,750 - CANVisApp - INFO - Decoded message received: ID=0xCF004FE, Name=EEC1, Interface=receiver
+2025-04-16 22:35:15,750 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-04-16 22:35:15,750 - CANVisApp - INFO - Signal values: {'EngineSpeed': 4812.875}
+2025-04-16 22:35:15,750 - MessageProcessor - INFO - Processing message 0x18FEF1FE from sender, data=['0x0', '0xfd', '0xb6', '0x0', '0x0', '0x0', '0x0', '0x0']
+2025-04-16 22:35:15,750 - CANVisApp - INFO - Updating UI with message: EEC1, signals: {'EngineSpeed': 4812.875}
+2025-04-16 22:35:15,750 - MessageProcessor - INFO - Successfully decoded message 0x18FEF1FE: CCVS1 with values {'WheelBasedVehicleSpeed': 182.98828125}
+2025-04-16 22:35:15,750 - MessageProcessor - INFO - Emitted message_decoded signal for CCVS1
+2025-04-16 22:35:15,750 - CANVisApp - INFO - Decoded message received: ID=0x18FEF1FE, Name=CCVS1, Interface=sender
+2025-04-16 22:35:15,751 - CANVisApp - INFO - Signal values: {'WheelBasedVehicleSpeed': 182.98828125}
+2025-04-16 22:35:15,751 - CANVisApp - INFO - Updating UI with message: CCVS1, signals: {'WheelBasedVehicleSpeed': 182.98828125}
+2025-04-16 22:35:15,752 - MessageProcessor - INFO - Processing message 0x18FEF1FE from receiver, data=['0x0', '0xfd', '0xb6', '0x0', '0x0', '0x0', '0x0', '0x0']
+2025-04-16 22:35:15,752 - MessageProcessor - INFO - Successfully decoded message 0x18FEF1FE: CCVS1 with values {'WheelBasedVehicleSpeed': 182.98828125}
+2025-04-16 22:35:15,752 - MessageProcessor - INFO - Emitted message_decoded signal for CCVS1
+2025-04-16 22:35:15,752 - CANVisApp - INFO - Decoded message received: ID=0x18FEF1FE, Name=CCVS1, Interface=receiver
+2025-04-16 22:35:15,752 - CANVisApp - INFO - Signal values: {'WheelBasedVehicleSpeed': 182.98828125}
+2025-04-16 22:35:15,752 - CANVisApp - INFO - Updating UI with message: CCVS1, signals: {'WheelBasedVehicleSpeed': 182.98828125}
+2025-04-16 22:35:15,850 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-04-16 22:35:15,850 - MessageProcessor - INFO - Processing message 0xCF004FE from sender, data=['0x0', '0x0', '0x0', '0x47', '0x96', '0x0', '0x0', '0x0']
+2025-04-16 22:35:15,850 - MessageProcessor - INFO - Successfully decoded message 0xCF004FE: EEC1 with values {'EngineSpeed': 4808.875}
+2025-04-16 22:35:15,850 - MessageProcessor - INFO - Emitted message_decoded signal for EEC1
+2025-04-16 22:35:15,850 - CANVisApp - INFO - Decoded message received: ID=0xCF004FE, Name=EEC1, Interface=sender
+2025-04-16 22:35:15,851 - CANVisApp - INFO - Signal values: {'EngineSpeed': 4808.875}
+2025-04-16 22:35:15,851 - CANVisApp - INFO - Updating UI with message: EEC1, signals: {'EngineSpeed': 4808.875}
+2025-04-16 22:35:15,852 - MessageProcessor - INFO - Processing message 0xCF004FE from receiver, data=['0x0', '0x0', '0x0', '0x47', '0x96', '0x0', '0x0', '0x0']
+2025-04-16 22:35:15,852 - MessageProcessor - INFO - Successfully decoded message 0xCF004FE: EEC1 with values {'EngineSpeed': 4808.875}
+2025-04-16 22:35:15,852 - MessageProcessor - INFO - Emitted message_decoded signal for EEC1
+2025-04-16 22:35:15,852 - CANVisApp - INFO - Decoded message received: ID=0xCF004FE, Name=EEC1, Interface=receiver
+2025-04-16 22:35:15,852 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-04-16 22:35:15,852 - CANVisApp - INFO - Signal values: {'EngineSpeed': 4808.875}
+2025-04-16 22:35:15,852 - MessageProcessor - INFO - Processing message 0x18FEF1FE from sender, data=['0x0', '0xf3', '0xba', '0x0', '0x0', '0x0', '0x0', '0x0']
+2025-04-16 22:35:15,852 - CANVisApp - INFO - Updating UI with message: EEC1, signals: {'EngineSpeed': 4808.875}
+2025-04-16 22:35:15,852 - MessageProcessor - INFO - Successfully decoded message 0x18FEF1FE: CCVS1 with values {'WheelBasedVehicleSpeed': 186.94921875}
+2025-04-16 22:35:15,852 - MessageProcessor - INFO - Emitted message_decoded signal for CCVS1
+2025-04-16 22:35:15,852 - CANVisApp - INFO - Decoded message received: ID=0x18FEF1FE, Name=CCVS1, Interface=sender
+2025-04-16 22:35:15,853 - CANVisApp - INFO - Signal values: {'WheelBasedVehicleSpeed': 186.94921875}
+2025-04-16 22:35:15,853 - CANVisApp - INFO - Updating UI with message: CCVS1, signals: {'WheelBasedVehicleSpeed': 186.94921875}
+2025-04-16 22:35:15,854 - MessageProcessor - INFO - Processing message 0x18FEF1FE from receiver, data=['0x0', '0xf3', '0xba', '0x0', '0x0', '0x0', '0x0', '0x0']
+2025-04-16 22:35:15,854 - MessageProcessor - INFO - Successfully decoded message 0x18FEF1FE: CCVS1 with values {'WheelBasedVehicleSpeed': 186.94921875}
+2025-04-16 22:35:15,854 - MessageProcessor - INFO - Emitted message_decoded signal for CCVS1
+2025-04-16 22:35:15,854 - CANVisApp - INFO - Decoded message received: ID=0x18FEF1FE, Name=CCVS1, Interface=receiver
+2025-04-16 22:35:15,854 - CANVisApp - INFO - Signal values: {'WheelBasedVehicleSpeed': 186.94921875}
+2025-04-16 22:35:15,854 - CANVisApp - INFO - Updating UI with message: CCVS1, signals: {'WheelBasedVehicleSpeed': 186.94921875}
+2025-04-16 22:35:15,953 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-04-16 22:35:15,953 - MessageProcessor - INFO - Processing message 0xCF004FE from sender, data=['0x0', '0x0', '0x0', '0xdd', '0x92', '0x0', '0x0', '0x0']
+2025-04-16 22:35:15,953 - MessageProcessor - INFO - Successfully decoded message 0xCF004FE: EEC1 with values {'EngineSpeed': 4699.625}
+2025-04-16 22:35:15,953 - MessageProcessor - INFO - Emitted message_decoded signal for EEC1
+2025-04-16 22:35:15,954 - CANVisApp - INFO - Decoded message received: ID=0xCF004FE, Name=EEC1, Interface=sender
+2025-04-16 22:35:15,954 - CANVisApp - INFO - Signal values: {'EngineSpeed': 4699.625}
+2025-04-16 22:35:15,954 - CANVisApp - INFO - Updating UI with message: EEC1, signals: {'EngineSpeed': 4699.625}
+2025-04-16 22:35:15,955 - MessageProcessor - INFO - Processing message 0xCF004FE from receiver, data=['0x0', '0x0', '0x0', '0xdd', '0x92', '0x0', '0x0', '0x0']
+2025-04-16 22:35:15,955 - MessageProcessor - INFO - Successfully decoded message 0xCF004FE: EEC1 with values {'EngineSpeed': 4699.625}
+2025-04-16 22:35:15,955 - MessageProcessor - INFO - Emitted message_decoded signal for EEC1
+2025-04-16 22:35:15,955 - CANVisApp - INFO - Decoded message received: ID=0xCF004FE, Name=EEC1, Interface=receiver
+2025-04-16 22:35:15,955 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-04-16 22:35:15,955 - CANVisApp - INFO - Signal values: {'EngineSpeed': 4699.625}
+2025-04-16 22:35:15,955 - MessageProcessor - INFO - Processing message 0x18FEF1FE from sender, data=['0x0', '0x36', '0xbe', '0x0', '0x0', '0x0', '0x0', '0x0']
+2025-04-16 22:35:15,955 - CANVisApp - INFO - Updating UI with message: EEC1, signals: {'EngineSpeed': 4699.625}
+2025-04-16 22:35:15,955 - MessageProcessor - INFO - Successfully decoded message 0x18FEF1FE: CCVS1 with values {'WheelBasedVehicleSpeed': 190.2109375}
+2025-04-16 22:35:15,955 - MessageProcessor - INFO - Emitted message_decoded signal for CCVS1
+2025-04-16 22:35:15,955 - CANVisApp - INFO - Decoded message received: ID=0x18FEF1FE, Name=CCVS1, Interface=sender
+2025-04-16 22:35:15,956 - CANVisApp - INFO - Signal values: {'WheelBasedVehicleSpeed': 190.2109375}
+2025-04-16 22:35:15,956 - CANVisApp - INFO - Updating UI with message: CCVS1, signals: {'WheelBasedVehicleSpeed': 190.2109375}
+2025-04-16 22:35:15,957 - MessageProcessor - INFO - Processing message 0x18FEF1FE from receiver, data=['0x0', '0x36', '0xbe', '0x0', '0x0', '0x0', '0x0', '0x0']
+2025-04-16 22:35:15,957 - MessageProcessor - INFO - Successfully decoded message 0x18FEF1FE: CCVS1 with values {'WheelBasedVehicleSpeed': 190.2109375}
+2025-04-16 22:35:15,957 - MessageProcessor - INFO - Emitted message_decoded signal for CCVS1
+2025-04-16 22:35:15,957 - CANVisApp - INFO - Decoded message received: ID=0x18FEF1FE, Name=CCVS1, Interface=receiver
+2025-04-16 22:35:15,957 - CANVisApp - INFO - Signal values: {'WheelBasedVehicleSpeed': 190.2109375}
+2025-04-16 22:35:15,957 - CANVisApp - INFO - Updating UI with message: CCVS1, signals: {'WheelBasedVehicleSpeed': 190.2109375}
+2025-04-16 22:35:16,057 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-04-16 22:35:16,057 - MessageProcessor - INFO - Processing message 0xCF004FE from sender, data=['0x0', '0x0', '0x0', '0xb5', '0x91', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,057 - MessageProcessor - INFO - Successfully decoded message 0xCF004FE: EEC1 with values {'EngineSpeed': 4662.625}
+2025-04-16 22:35:16,057 - MessageProcessor - INFO - Emitted message_decoded signal for EEC1
+2025-04-16 22:35:16,057 - CANVisApp - INFO - Decoded message received: ID=0xCF004FE, Name=EEC1, Interface=sender
+2025-04-16 22:35:16,057 - CANVisApp - INFO - Signal values: {'EngineSpeed': 4662.625}
+2025-04-16 22:35:16,057 - CANVisApp - INFO - Updating UI with message: EEC1, signals: {'EngineSpeed': 4662.625}
+2025-04-16 22:35:16,058 - MessageProcessor - INFO - Processing message 0xCF004FE from receiver, data=['0x0', '0x0', '0x0', '0xb5', '0x91', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,058 - MessageProcessor - INFO - Successfully decoded message 0xCF004FE: EEC1 with values {'EngineSpeed': 4662.625}
+2025-04-16 22:35:16,058 - MessageProcessor - INFO - Emitted message_decoded signal for EEC1
+2025-04-16 22:35:16,058 - CANVisApp - INFO - Decoded message received: ID=0xCF004FE, Name=EEC1, Interface=receiver
+2025-04-16 22:35:16,058 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-04-16 22:35:16,058 - CANVisApp - INFO - Signal values: {'EngineSpeed': 4662.625}
+2025-04-16 22:35:16,058 - MessageProcessor - INFO - Processing message 0x18FEF1FE from sender, data=['0x0', '0xbb', '0xbe', '0x0', '0x0', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,058 - CANVisApp - INFO - Updating UI with message: EEC1, signals: {'EngineSpeed': 4662.625}
+2025-04-16 22:35:16,058 - MessageProcessor - INFO - Successfully decoded message 0x18FEF1FE: CCVS1 with values {'WheelBasedVehicleSpeed': 190.73046875}
+2025-04-16 22:35:16,058 - MessageProcessor - INFO - Emitted message_decoded signal for CCVS1
+2025-04-16 22:35:16,058 - CANVisApp - INFO - Decoded message received: ID=0x18FEF1FE, Name=CCVS1, Interface=sender
+2025-04-16 22:35:16,059 - CANVisApp - INFO - Signal values: {'WheelBasedVehicleSpeed': 190.73046875}
+2025-04-16 22:35:16,059 - CANVisApp - INFO - Updating UI with message: CCVS1, signals: {'WheelBasedVehicleSpeed': 190.73046875}
+2025-04-16 22:35:16,060 - MessageProcessor - INFO - Processing message 0x18FEF1FE from receiver, data=['0x0', '0xbb', '0xbe', '0x0', '0x0', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,060 - MessageProcessor - INFO - Successfully decoded message 0x18FEF1FE: CCVS1 with values {'WheelBasedVehicleSpeed': 190.73046875}
+2025-04-16 22:35:16,060 - MessageProcessor - INFO - Emitted message_decoded signal for CCVS1
+2025-04-16 22:35:16,060 - CANVisApp - INFO - Decoded message received: ID=0x18FEF1FE, Name=CCVS1, Interface=receiver
+2025-04-16 22:35:16,060 - CANVisApp - INFO - Signal values: {'WheelBasedVehicleSpeed': 190.73046875}
+2025-04-16 22:35:16,060 - CANVisApp - INFO - Updating UI with message: CCVS1, signals: {'WheelBasedVehicleSpeed': 190.73046875}
+2025-04-16 22:35:16,160 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-04-16 22:35:16,160 - MessageProcessor - INFO - Processing message 0xCF004FE from sender, data=['0x0', '0x0', '0x0', '0x6c', '0x8e', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,160 - MessageProcessor - INFO - Successfully decoded message 0xCF004FE: EEC1 with values {'EngineSpeed': 4557.5}
+2025-04-16 22:35:16,160 - MessageProcessor - INFO - Emitted message_decoded signal for EEC1
+2025-04-16 22:35:16,160 - CANVisApp - INFO - Decoded message received: ID=0xCF004FE, Name=EEC1, Interface=sender
+2025-04-16 22:35:16,160 - CANVisApp - INFO - Signal values: {'EngineSpeed': 4557.5}
+2025-04-16 22:35:16,160 - CANVisApp - INFO - Updating UI with message: EEC1, signals: {'EngineSpeed': 4557.5}
+2025-04-16 22:35:16,161 - MessageProcessor - INFO - Processing message 0xCF004FE from receiver, data=['0x0', '0x0', '0x0', '0x6c', '0x8e', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,161 - MessageProcessor - INFO - Successfully decoded message 0xCF004FE: EEC1 with values {'EngineSpeed': 4557.5}
+2025-04-16 22:35:16,161 - MessageProcessor - INFO - Emitted message_decoded signal for EEC1
+2025-04-16 22:35:16,161 - CANVisApp - INFO - Decoded message received: ID=0xCF004FE, Name=EEC1, Interface=receiver
+2025-04-16 22:35:16,161 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-04-16 22:35:16,161 - CANVisApp - INFO - Signal values: {'EngineSpeed': 4557.5}
+2025-04-16 22:35:16,161 - MessageProcessor - INFO - Processing message 0x18FEF1FE from sender, data=['0x0', '0xbf', '0xc0', '0x0', '0x0', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,161 - CANVisApp - INFO - Updating UI with message: EEC1, signals: {'EngineSpeed': 4557.5}
+2025-04-16 22:35:16,161 - MessageProcessor - INFO - Successfully decoded message 0x18FEF1FE: CCVS1 with values {'WheelBasedVehicleSpeed': 192.74609375}
+2025-04-16 22:35:16,161 - MessageProcessor - INFO - Emitted message_decoded signal for CCVS1
+2025-04-16 22:35:16,161 - CANVisApp - INFO - Decoded message received: ID=0x18FEF1FE, Name=CCVS1, Interface=sender
+2025-04-16 22:35:16,161 - CANVisApp - INFO - Signal values: {'WheelBasedVehicleSpeed': 192.74609375}
+2025-04-16 22:35:16,161 - CANVisApp - INFO - Updating UI with message: CCVS1, signals: {'WheelBasedVehicleSpeed': 192.74609375}
+2025-04-16 22:35:16,164 - MessageProcessor - INFO - Processing message 0x18FEF1FE from receiver, data=['0x0', '0xbf', '0xc0', '0x0', '0x0', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,164 - MessageProcessor - INFO - Successfully decoded message 0x18FEF1FE: CCVS1 with values {'WheelBasedVehicleSpeed': 192.74609375}
+2025-04-16 22:35:16,164 - MessageProcessor - INFO - Emitted message_decoded signal for CCVS1
+2025-04-16 22:35:16,164 - CANVisApp - INFO - Decoded message received: ID=0x18FEF1FE, Name=CCVS1, Interface=receiver
+2025-04-16 22:35:16,164 - CANVisApp - INFO - Signal values: {'WheelBasedVehicleSpeed': 192.74609375}
+2025-04-16 22:35:16,164 - CANVisApp - INFO - Updating UI with message: CCVS1, signals: {'WheelBasedVehicleSpeed': 192.74609375}
+2025-04-16 22:35:16,263 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-04-16 22:35:16,263 - MessageProcessor - INFO - Processing message 0xCF004FE from sender, data=['0x0', '0x0', '0x0', '0x27', '0x8e', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,263 - MessageProcessor - INFO - Successfully decoded message 0xCF004FE: EEC1 with values {'EngineSpeed': 4548.875}
+2025-04-16 22:35:16,263 - MessageProcessor - INFO - Emitted message_decoded signal for EEC1
+2025-04-16 22:35:16,263 - CANVisApp - INFO - Decoded message received: ID=0xCF004FE, Name=EEC1, Interface=sender
+2025-04-16 22:35:16,264 - CANVisApp - INFO - Signal values: {'EngineSpeed': 4548.875}
+2025-04-16 22:35:16,264 - CANVisApp - INFO - Updating UI with message: EEC1, signals: {'EngineSpeed': 4548.875}
+2025-04-16 22:35:16,265 - MessageProcessor - INFO - Processing message 0xCF004FE from receiver, data=['0x0', '0x0', '0x0', '0x27', '0x8e', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,265 - MessageProcessor - INFO - Successfully decoded message 0xCF004FE: EEC1 with values {'EngineSpeed': 4548.875}
+2025-04-16 22:35:16,265 - MessageProcessor - INFO - Emitted message_decoded signal for EEC1
+2025-04-16 22:35:16,265 - CANVisApp - INFO - Decoded message received: ID=0xCF004FE, Name=EEC1, Interface=receiver
+2025-04-16 22:35:16,265 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-04-16 22:35:16,265 - CANVisApp - INFO - Signal values: {'EngineSpeed': 4548.875}
+2025-04-16 22:35:16,265 - MessageProcessor - INFO - Processing message 0x18FEF1FE from sender, data=['0x0', '0xb0', '0xc3', '0x0', '0x0', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,265 - CANVisApp - INFO - Updating UI with message: EEC1, signals: {'EngineSpeed': 4548.875}
+2025-04-16 22:35:16,265 - MessageProcessor - INFO - Successfully decoded message 0x18FEF1FE: CCVS1 with values {'WheelBasedVehicleSpeed': 195.6875}
+2025-04-16 22:35:16,265 - MessageProcessor - INFO - Emitted message_decoded signal for CCVS1
+2025-04-16 22:35:16,265 - CANVisApp - INFO - Decoded message received: ID=0x18FEF1FE, Name=CCVS1, Interface=sender
+2025-04-16 22:35:16,266 - CANVisApp - INFO - Signal values: {'WheelBasedVehicleSpeed': 195.6875}
+2025-04-16 22:35:16,266 - CANVisApp - INFO - Updating UI with message: CCVS1, signals: {'WheelBasedVehicleSpeed': 195.6875}
+2025-04-16 22:35:16,267 - MessageProcessor - INFO - Processing message 0x18FEF1FE from receiver, data=['0x0', '0xb0', '0xc3', '0x0', '0x0', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,267 - MessageProcessor - INFO - Successfully decoded message 0x18FEF1FE: CCVS1 with values {'WheelBasedVehicleSpeed': 195.6875}
+2025-04-16 22:35:16,267 - MessageProcessor - INFO - Emitted message_decoded signal for CCVS1
+2025-04-16 22:35:16,267 - CANVisApp - INFO - Decoded message received: ID=0x18FEF1FE, Name=CCVS1, Interface=receiver
+2025-04-16 22:35:16,267 - CANVisApp - INFO - Signal values: {'WheelBasedVehicleSpeed': 195.6875}
+2025-04-16 22:35:16,267 - CANVisApp - INFO - Updating UI with message: CCVS1, signals: {'WheelBasedVehicleSpeed': 195.6875}
+2025-04-16 22:35:16,365 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-04-16 22:35:16,365 - MessageProcessor - INFO - Processing message 0xCF004FE from sender, data=['0x0', '0x0', '0x0', '0x70', '0x93', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,365 - MessageProcessor - INFO - Successfully decoded message 0xCF004FE: EEC1 with values {'EngineSpeed': 4718.0}
+2025-04-16 22:35:16,365 - MessageProcessor - INFO - Emitted message_decoded signal for EEC1
+2025-04-16 22:35:16,365 - CANVisApp - INFO - Decoded message received: ID=0xCF004FE, Name=EEC1, Interface=sender
+2025-04-16 22:35:16,366 - CANVisApp - INFO - Signal values: {'EngineSpeed': 4718.0}
+2025-04-16 22:35:16,366 - CANVisApp - INFO - Updating UI with message: EEC1, signals: {'EngineSpeed': 4718.0}
+2025-04-16 22:35:16,367 - MessageProcessor - INFO - Processing message 0xCF004FE from receiver, data=['0x0', '0x0', '0x0', '0x70', '0x93', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,367 - MessageProcessor - INFO - Successfully decoded message 0xCF004FE: EEC1 with values {'EngineSpeed': 4718.0}
+2025-04-16 22:35:16,367 - MessageProcessor - INFO - Emitted message_decoded signal for EEC1
+2025-04-16 22:35:16,367 - CANVisApp - INFO - Decoded message received: ID=0xCF004FE, Name=EEC1, Interface=receiver
+2025-04-16 22:35:16,367 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-04-16 22:35:16,367 - CANVisApp - INFO - Signal values: {'EngineSpeed': 4718.0}
+2025-04-16 22:35:16,367 - MessageProcessor - INFO - Processing message 0x18FEF1FE from sender, data=['0x0', '0x9e', '0xc1', '0x0', '0x0', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,367 - CANVisApp - INFO - Updating UI with message: EEC1, signals: {'EngineSpeed': 4718.0}
+2025-04-16 22:35:16,367 - MessageProcessor - INFO - Successfully decoded message 0x18FEF1FE: CCVS1 with values {'WheelBasedVehicleSpeed': 193.6171875}
+2025-04-16 22:35:16,367 - MessageProcessor - INFO - Emitted message_decoded signal for CCVS1
+2025-04-16 22:35:16,367 - CANVisApp - INFO - Decoded message received: ID=0x18FEF1FE, Name=CCVS1, Interface=sender
+2025-04-16 22:35:16,368 - CANVisApp - INFO - Signal values: {'WheelBasedVehicleSpeed': 193.6171875}
+2025-04-16 22:35:16,368 - CANVisApp - INFO - Updating UI with message: CCVS1, signals: {'WheelBasedVehicleSpeed': 193.6171875}
+2025-04-16 22:35:16,369 - MessageProcessor - INFO - Processing message 0x18FEF1FE from receiver, data=['0x0', '0x9e', '0xc1', '0x0', '0x0', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,369 - MessageProcessor - INFO - Successfully decoded message 0x18FEF1FE: CCVS1 with values {'WheelBasedVehicleSpeed': 193.6171875}
+2025-04-16 22:35:16,369 - MessageProcessor - INFO - Emitted message_decoded signal for CCVS1
+2025-04-16 22:35:16,369 - CANVisApp - INFO - Decoded message received: ID=0x18FEF1FE, Name=CCVS1, Interface=receiver
+2025-04-16 22:35:16,369 - CANVisApp - INFO - Signal values: {'WheelBasedVehicleSpeed': 193.6171875}
+2025-04-16 22:35:16,369 - CANVisApp - INFO - Updating UI with message: CCVS1, signals: {'WheelBasedVehicleSpeed': 193.6171875}
+2025-04-16 22:35:16,468 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-04-16 22:35:16,468 - MessageProcessor - INFO - Processing message 0xCF004FE from sender, data=['0x0', '0x0', '0x0', '0xa5', '0x8e', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,468 - MessageProcessor - INFO - Successfully decoded message 0xCF004FE: EEC1 with values {'EngineSpeed': 4564.625}
+2025-04-16 22:35:16,468 - MessageProcessor - INFO - Emitted message_decoded signal for EEC1
+2025-04-16 22:35:16,468 - CANVisApp - INFO - Decoded message received: ID=0xCF004FE, Name=EEC1, Interface=sender
+2025-04-16 22:35:16,468 - CANVisApp - INFO - Signal values: {'EngineSpeed': 4564.625}
+2025-04-16 22:35:16,468 - CANVisApp - INFO - Updating UI with message: EEC1, signals: {'EngineSpeed': 4564.625}
+2025-04-16 22:35:16,469 - MessageProcessor - INFO - Processing message 0xCF004FE from receiver, data=['0x0', '0x0', '0x0', '0xa5', '0x8e', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,469 - MessageProcessor - INFO - Successfully decoded message 0xCF004FE: EEC1 with values {'EngineSpeed': 4564.625}
+2025-04-16 22:35:16,469 - MessageProcessor - INFO - Emitted message_decoded signal for EEC1
+2025-04-16 22:35:16,469 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-04-16 22:35:16,469 - CANVisApp - INFO - Decoded message received: ID=0xCF004FE, Name=EEC1, Interface=receiver
+2025-04-16 22:35:16,469 - MessageProcessor - INFO - Processing message 0x18FEF1FE from sender, data=['0x0', '0xda', '0xc6', '0x0', '0x0', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,469 - CANVisApp - INFO - Signal values: {'EngineSpeed': 4564.625}
+2025-04-16 22:35:16,469 - MessageProcessor - INFO - Successfully decoded message 0x18FEF1FE: CCVS1 with values {'WheelBasedVehicleSpeed': 198.8515625}
+2025-04-16 22:35:16,469 - CANVisApp - INFO - Updating UI with message: EEC1, signals: {'EngineSpeed': 4564.625}
+2025-04-16 22:35:16,469 - MessageProcessor - INFO - Emitted message_decoded signal for CCVS1
+2025-04-16 22:35:16,469 - CANVisApp - INFO - Decoded message received: ID=0x18FEF1FE, Name=CCVS1, Interface=sender
+2025-04-16 22:35:16,470 - CANVisApp - INFO - Signal values: {'WheelBasedVehicleSpeed': 198.8515625}
+2025-04-16 22:35:16,470 - CANVisApp - INFO - Updating UI with message: CCVS1, signals: {'WheelBasedVehicleSpeed': 198.8515625}
+2025-04-16 22:35:16,471 - MessageProcessor - INFO - Processing message 0x18FEF1FE from receiver, data=['0x0', '0xda', '0xc6', '0x0', '0x0', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,471 - MessageProcessor - INFO - Successfully decoded message 0x18FEF1FE: CCVS1 with values {'WheelBasedVehicleSpeed': 198.8515625}
+2025-04-16 22:35:16,471 - MessageProcessor - INFO - Emitted message_decoded signal for CCVS1
+2025-04-16 22:35:16,471 - CANVisApp - INFO - Decoded message received: ID=0x18FEF1FE, Name=CCVS1, Interface=receiver
+2025-04-16 22:35:16,471 - CANVisApp - INFO - Signal values: {'WheelBasedVehicleSpeed': 198.8515625}
+2025-04-16 22:35:16,471 - CANVisApp - INFO - Updating UI with message: CCVS1, signals: {'WheelBasedVehicleSpeed': 198.8515625}
+2025-04-16 22:35:16,570 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-04-16 22:35:16,570 - MessageProcessor - INFO - Processing message 0xCF004FE from sender, data=['0x0', '0x0', '0x0', '0x40', '0x8d', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,570 - MessageProcessor - INFO - Successfully decoded message 0xCF004FE: EEC1 with values {'EngineSpeed': 4520.0}
+2025-04-16 22:35:16,570 - MessageProcessor - INFO - Emitted message_decoded signal for EEC1
+2025-04-16 22:35:16,570 - CANVisApp - INFO - Decoded message received: ID=0xCF004FE, Name=EEC1, Interface=sender
+2025-04-16 22:35:16,571 - CANVisApp - INFO - Signal values: {'EngineSpeed': 4520.0}
+2025-04-16 22:35:16,571 - CANVisApp - INFO - Updating UI with message: EEC1, signals: {'EngineSpeed': 4520.0}
+2025-04-16 22:35:16,572 - MessageProcessor - INFO - Processing message 0xCF004FE from receiver, data=['0x0', '0x0', '0x0', '0x40', '0x8d', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,572 - MessageProcessor - INFO - Successfully decoded message 0xCF004FE: EEC1 with values {'EngineSpeed': 4520.0}
+2025-04-16 22:35:16,572 - MessageProcessor - INFO - Emitted message_decoded signal for EEC1
+2025-04-16 22:35:16,572 - CANVisApp - INFO - Decoded message received: ID=0xCF004FE, Name=EEC1, Interface=receiver
+2025-04-16 22:35:16,572 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-04-16 22:35:16,572 - CANVisApp - INFO - Signal values: {'EngineSpeed': 4520.0}
+2025-04-16 22:35:16,572 - MessageProcessor - INFO - Processing message 0x18FEF1FE from sender, data=['0x0', '0x2c', '0xc6', '0x0', '0x0', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,572 - CANVisApp - INFO - Updating UI with message: EEC1, signals: {'EngineSpeed': 4520.0}
+2025-04-16 22:35:16,572 - MessageProcessor - INFO - Successfully decoded message 0x18FEF1FE: CCVS1 with values {'WheelBasedVehicleSpeed': 198.171875}
+2025-04-16 22:35:16,572 - MessageProcessor - INFO - Emitted message_decoded signal for CCVS1
+2025-04-16 22:35:16,572 - CANVisApp - INFO - Decoded message received: ID=0x18FEF1FE, Name=CCVS1, Interface=sender
+2025-04-16 22:35:16,572 - CANVisApp - INFO - Signal values: {'WheelBasedVehicleSpeed': 198.171875}
+2025-04-16 22:35:16,573 - CANVisApp - INFO - Updating UI with message: CCVS1, signals: {'WheelBasedVehicleSpeed': 198.171875}
+2025-04-16 22:35:16,574 - MessageProcessor - INFO - Processing message 0x18FEF1FE from receiver, data=['0x0', '0x2c', '0xc6', '0x0', '0x0', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,574 - MessageProcessor - INFO - Successfully decoded message 0x18FEF1FE: CCVS1 with values {'WheelBasedVehicleSpeed': 198.171875}
+2025-04-16 22:35:16,574 - MessageProcessor - INFO - Emitted message_decoded signal for CCVS1
+2025-04-16 22:35:16,574 - CANVisApp - INFO - Decoded message received: ID=0x18FEF1FE, Name=CCVS1, Interface=receiver
+2025-04-16 22:35:16,574 - CANVisApp - INFO - Signal values: {'WheelBasedVehicleSpeed': 198.171875}
+2025-04-16 22:35:16,574 - CANVisApp - INFO - Updating UI with message: CCVS1, signals: {'WheelBasedVehicleSpeed': 198.171875}
+2025-04-16 22:35:16,673 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-04-16 22:35:16,673 - MessageProcessor - INFO - Processing message 0xCF004FE from sender, data=['0x0', '0x0', '0x0', '0xb1', '0x8f', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,673 - MessageProcessor - INFO - Successfully decoded message 0xCF004FE: EEC1 with values {'EngineSpeed': 4598.125}
+2025-04-16 22:35:16,673 - MessageProcessor - INFO - Emitted message_decoded signal for EEC1
+2025-04-16 22:35:16,673 - CANVisApp - INFO - Decoded message received: ID=0xCF004FE, Name=EEC1, Interface=sender
+2025-04-16 22:35:16,674 - CANVisApp - INFO - Signal values: {'EngineSpeed': 4598.125}
+2025-04-16 22:35:16,674 - CANVisApp - INFO - Updating UI with message: EEC1, signals: {'EngineSpeed': 4598.125}
+2025-04-16 22:35:16,675 - MessageProcessor - INFO - Processing message 0xCF004FE from receiver, data=['0x0', '0x0', '0x0', '0xb1', '0x8f', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,675 - MessageProcessor - INFO - Successfully decoded message 0xCF004FE: EEC1 with values {'EngineSpeed': 4598.125}
+2025-04-16 22:35:16,675 - MessageProcessor - INFO - Emitted message_decoded signal for EEC1
+2025-04-16 22:35:16,675 - CANVisApp - INFO - Decoded message received: ID=0xCF004FE, Name=EEC1, Interface=receiver
+2025-04-16 22:35:16,675 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-04-16 22:35:16,675 - CANVisApp - INFO - Signal values: {'EngineSpeed': 4598.125}
+2025-04-16 22:35:16,675 - MessageProcessor - INFO - Processing message 0x18FEF1FE from sender, data=['0x0', '0xeb', '0xc2', '0x0', '0x0', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,675 - CANVisApp - INFO - Updating UI with message: EEC1, signals: {'EngineSpeed': 4598.125}
+2025-04-16 22:35:16,675 - MessageProcessor - INFO - Successfully decoded message 0x18FEF1FE: CCVS1 with values {'WheelBasedVehicleSpeed': 194.91796875}
+2025-04-16 22:35:16,675 - MessageProcessor - INFO - Emitted message_decoded signal for CCVS1
+2025-04-16 22:35:16,675 - CANVisApp - INFO - Decoded message received: ID=0x18FEF1FE, Name=CCVS1, Interface=sender
+2025-04-16 22:35:16,676 - CANVisApp - INFO - Signal values: {'WheelBasedVehicleSpeed': 194.91796875}
+2025-04-16 22:35:16,676 - CANVisApp - INFO - Updating UI with message: CCVS1, signals: {'WheelBasedVehicleSpeed': 194.91796875}
+2025-04-16 22:35:16,677 - MessageProcessor - INFO - Processing message 0x18FEF1FE from receiver, data=['0x0', '0xeb', '0xc2', '0x0', '0x0', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,677 - MessageProcessor - INFO - Successfully decoded message 0x18FEF1FE: CCVS1 with values {'WheelBasedVehicleSpeed': 194.91796875}
+2025-04-16 22:35:16,677 - MessageProcessor - INFO - Emitted message_decoded signal for CCVS1
+2025-04-16 22:35:16,677 - CANVisApp - INFO - Decoded message received: ID=0x18FEF1FE, Name=CCVS1, Interface=receiver
+2025-04-16 22:35:16,677 - CANVisApp - INFO - Signal values: {'WheelBasedVehicleSpeed': 194.91796875}
+2025-04-16 22:35:16,677 - CANVisApp - INFO - Updating UI with message: CCVS1, signals: {'WheelBasedVehicleSpeed': 194.91796875}
+2025-04-16 22:35:16,777 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-04-16 22:35:16,777 - MessageProcessor - INFO - Processing message 0xCF004FE from sender, data=['0x0', '0x0', '0x0', '0x47', '0x92', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,777 - MessageProcessor - INFO - Successfully decoded message 0xCF004FE: EEC1 with values {'EngineSpeed': 4680.875}
+2025-04-16 22:35:16,777 - MessageProcessor - INFO - Emitted message_decoded signal for EEC1
+2025-04-16 22:35:16,777 - CANVisApp - INFO - Decoded message received: ID=0xCF004FE, Name=EEC1, Interface=sender
+2025-04-16 22:35:16,777 - CANVisApp - INFO - Signal values: {'EngineSpeed': 4680.875}
+2025-04-16 22:35:16,777 - CANVisApp - INFO - Updating UI with message: EEC1, signals: {'EngineSpeed': 4680.875}
+2025-04-16 22:35:16,778 - MessageProcessor - INFO - Processing message 0xCF004FE from receiver, data=['0x0', '0x0', '0x0', '0x47', '0x92', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,778 - MessageProcessor - INFO - Successfully decoded message 0xCF004FE: EEC1 with values {'EngineSpeed': 4680.875}
+2025-04-16 22:35:16,778 - MessageProcessor - INFO - Emitted message_decoded signal for EEC1
+2025-04-16 22:35:16,778 - CANVisApp - INFO - Decoded message received: ID=0xCF004FE, Name=EEC1, Interface=receiver
+2025-04-16 22:35:16,778 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-04-16 22:35:16,778 - CANVisApp - INFO - Signal values: {'EngineSpeed': 4680.875}
+2025-04-16 22:35:16,778 - MessageProcessor - INFO - Processing message 0x18FEF1FE from sender, data=['0x0', '0xac', '0xc3', '0x0', '0x0', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,778 - CANVisApp - INFO - Updating UI with message: EEC1, signals: {'EngineSpeed': 4680.875}
+2025-04-16 22:35:16,778 - MessageProcessor - INFO - Successfully decoded message 0x18FEF1FE: CCVS1 with values {'WheelBasedVehicleSpeed': 195.671875}
+2025-04-16 22:35:16,778 - MessageProcessor - INFO - Emitted message_decoded signal for CCVS1
+2025-04-16 22:35:16,778 - CANVisApp - INFO - Decoded message received: ID=0x18FEF1FE, Name=CCVS1, Interface=sender
+2025-04-16 22:35:16,779 - CANVisApp - INFO - Signal values: {'WheelBasedVehicleSpeed': 195.671875}
+2025-04-16 22:35:16,779 - CANVisApp - INFO - Updating UI with message: CCVS1, signals: {'WheelBasedVehicleSpeed': 195.671875}
+2025-04-16 22:35:16,780 - MessageProcessor - INFO - Processing message 0x18FEF1FE from receiver, data=['0x0', '0xac', '0xc3', '0x0', '0x0', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,780 - MessageProcessor - INFO - Successfully decoded message 0x18FEF1FE: CCVS1 with values {'WheelBasedVehicleSpeed': 195.671875}
+2025-04-16 22:35:16,780 - MessageProcessor - INFO - Emitted message_decoded signal for CCVS1
+2025-04-16 22:35:16,780 - CANVisApp - INFO - Decoded message received: ID=0x18FEF1FE, Name=CCVS1, Interface=receiver
+2025-04-16 22:35:16,780 - CANVisApp - INFO - Signal values: {'WheelBasedVehicleSpeed': 195.671875}
+2025-04-16 22:35:16,780 - CANVisApp - INFO - Updating UI with message: CCVS1, signals: {'WheelBasedVehicleSpeed': 195.671875}
+2025-04-16 22:35:16,879 - DBCParser - INFO - Encoding message ID 0xCF004FE, DB ID 0xCF004FE
+2025-04-16 22:35:16,879 - MessageProcessor - INFO - Processing message 0xCF004FE from sender, data=['0x0', '0x0', '0x0', '0x7c', '0x91', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,879 - MessageProcessor - INFO - Successfully decoded message 0xCF004FE: EEC1 with values {'EngineSpeed': 4655.5}
+2025-04-16 22:35:16,879 - MessageProcessor - INFO - Emitted message_decoded signal for EEC1
+2025-04-16 22:35:16,879 - CANVisApp - INFO - Decoded message received: ID=0xCF004FE, Name=EEC1, Interface=sender
+2025-04-16 22:35:16,879 - CANVisApp - INFO - Signal values: {'EngineSpeed': 4655.5}
+2025-04-16 22:35:16,879 - CANVisApp - INFO - Updating UI with message: EEC1, signals: {'EngineSpeed': 4655.5}
+2025-04-16 22:35:16,881 - MessageProcessor - INFO - Processing message 0xCF004FE from receiver, data=['0x0', '0x0', '0x0', '0x7c', '0x91', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,881 - MessageProcessor - INFO - Successfully decoded message 0xCF004FE: EEC1 with values {'EngineSpeed': 4655.5}
+2025-04-16 22:35:16,881 - MessageProcessor - INFO - Emitted message_decoded signal for EEC1
+2025-04-16 22:35:16,881 - CANVisApp - INFO - Decoded message received: ID=0xCF004FE, Name=EEC1, Interface=receiver
+2025-04-16 22:35:16,881 - DBCParser - INFO - Encoding message ID 0x18FEF1FE, DB ID 0x18FEF1FE
+2025-04-16 22:35:16,881 - CANVisApp - INFO - Signal values: {'EngineSpeed': 4655.5}
+2025-04-16 22:35:16,881 - MessageProcessor - INFO - Processing message 0x18FEF1FE from sender, data=['0x0', '0x25', '0xc2', '0x0', '0x0', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,881 - CANVisApp - INFO - Updating UI with message: EEC1, signals: {'EngineSpeed': 4655.5}
+2025-04-16 22:35:16,881 - MessageProcessor - INFO - Successfully decoded message 0x18FEF1FE: CCVS1 with values {'WheelBasedVehicleSpeed': 194.14453125}
+2025-04-16 22:35:16,881 - MessageProcessor - INFO - Emitted message_decoded signal for CCVS1
+2025-04-16 22:35:16,881 - CANVisApp - INFO - Decoded message received: ID=0x18FEF1FE, Name=CCVS1, Interface=sender
+2025-04-16 22:35:16,881 - CANVisApp - INFO - Signal values: {'WheelBasedVehicleSpeed': 194.14453125}
+2025-04-16 22:35:16,882 - CANVisApp - INFO - Updating UI with message: CCVS1, signals: {'WheelBasedVehicleSpeed': 194.14453125}
+2025-04-16 22:35:16,883 - MessageProcessor - INFO - Processing message 0x18FEF1FE from receiver, data=['0x0', '0x25', '0xc2', '0x0', '0x0', '0x0', '0x0', '0x0']
+2025-04-16 22:35:16,883 - MessageProcessor - INFO - Successfully decoded message 0x18FEF1FE: CCVS1 with values {'WheelBasedVehicleSpeed': 194.14453125}
+2025-04-16 22:35:16,883 - MessageProcessor - INFO - Emitted message_decoded signal for CCVS1
+2025-04-16 22:35:16,883 - CANVisApp - INFO - Decoded message received: ID=0x18FEF1FE, Name=CCVS1, Interface=receiver
+2025-04-16 22:35:16,883 - CANVisApp - INFO - Signal values: {'WheelBasedVehicleSpeed': 194.14453125}
+2025-04-16 22:35:16,883 - CANVisApp - INFO - Updating UI with message: CCVS1, signals: {'WheelBasedVehicleSpeed': 194.14453125}
+2025-04-16 22:35:16,951 - CANSimulator - INFO - Stopping CAN simulator
+2025-04-16 22:42:03,434 - CANVisApp - INFO - Settings would be saved here
